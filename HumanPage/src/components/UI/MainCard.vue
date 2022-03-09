@@ -7,7 +7,7 @@
            <div class="card">
                <div class="card-image">
                    <img src="src/img/1.jpg" alt="" />
-                   <a href="#" class="halfway-fab btn-floating black pulse">
+                   <a href="#" class="halfway-fab btn-floating orange darken-2 pulse">
                        <i class="material-icons">fitness_center</i>
                    </a>
                </div>
@@ -25,7 +25,7 @@
            <div class="card">
                <div class="card-image">
                    <img src="src/img/2.jpg" alt="" />
-                   <a href="#" class="halfway-fab btn-floating black pulse">
+                   <a href="#" class="halfway-fab btn-floating orange darken-2 pulse">
                        <i class="material-icons">fitness_center</i>
                    </a>
                </div>
@@ -43,7 +43,7 @@
            <div class="card">
                <div class="card-image">
                    <img src="src/img/3.jpg" alt="" />
-                   <a href="#" class="halfway-fab btn-floating black pulse">
+                   <a href="#" class="halfway-fab btn-floating orange darken-2 pulse">
                        <i class="material-icons">fitness_center</i>
                    </a>
                </div>
