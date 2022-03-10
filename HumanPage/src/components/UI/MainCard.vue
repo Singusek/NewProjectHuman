@@ -1,7 +1,5 @@
 <template>
 <div class="container">
-   
-
    <div class="row" style="display: flex">
        <div class="col s12 16">
            <div class="card">

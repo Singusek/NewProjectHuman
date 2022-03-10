@@ -7,7 +7,7 @@
         <li><a href="badges.html">Cennik</a></li>
         <li><a href="collapsible.html">Grafik</a></li>
         <li><a href="collapsible.html">Zawodnicy</a></li>
-        <li><a href="collapsible.html">Kontakt</a></li>
+        <li><a href="http://localhost:3000/contact">Kontakt</a></li>
       </ul>
     </div>
   </nav>
