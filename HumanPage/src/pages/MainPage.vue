@@ -4,7 +4,7 @@
     <div class="photo">
     <base-card style="padding: 15px"></base-card>
     </div>
-    <main-card></main-card>
+    <main-card style="padding-top: 30px;"></main-card>
     <div class="main-photo">
     <div class="photo">
         <div class="h5"> 
@@ -29,7 +29,7 @@
             </div>
         </a>
     </div>
-    <gallery></gallery>
+    <gallery style="padding-bottom: 40px;"></gallery>
     </div>
     <the-footer></the-footer>
 </div>
@@ -57,13 +57,10 @@ export default {
 .photo {
     background-color: rgb(54, 53, 53);  
     padding: 15px;
-    
-     
 }
 
 .icons {
     color: white;
-    
 }
 .op {
     justify-content: center;

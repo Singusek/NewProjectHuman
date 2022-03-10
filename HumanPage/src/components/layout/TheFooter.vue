@@ -5,30 +5,25 @@
               <div class="col l6 s12">
                 <h5 class="white-text" style="text-align:center">Skontaktuj się z nami!</h5>
                 <p class="grey-text text-lighten-4" style="text-align:center">Masz jakieś pytania? Odwiedź naszą stronę FAQ (najczęściej zadawane pytania). Jeżeli dalej masz wątpliwości, zadzwoń do nas lub napisz!</p>
+                <div class="row icons">
                 <div class="col 16 m4 s12" >
-                 <div  style="text-align:center">
-                <i class="medium material-icons" >local_phone</i>
-                <p class="grey-text text-lighten-4">+48 696-044-388</p>
+                 <div class="container" style="text-align:center">
                 <i class="medium material-icons" >local_phone</i>
                 <p class="grey-text text-lighten-4">+48 696-044-388</p>
                 </div>
                 </div>
               </div>
+              </div>
               <div class="col l4 offset-l2 s12">
-                <h5 class="white-text">Links</h5>
-                <ul>
-                  <li><a class="grey-text text-lighten-3" href="#!">Link 1</a></li>
-                  <li><a class="grey-text text-lighten-3" href="#!">Link 2</a></li>
-                  <li><a class="grey-text text-lighten-3" href="#!">Link 3</a></li>
-                  <li><a class="grey-text text-lighten-3" href="#!">Link 4</a></li>
-                </ul>
+                  <img src="src/img/wb_logo.png" alt="">
+                <h6 class="white-text" style="text-align:center">Klub realizuje zadanie publiczne w zakresie wspierania i upowszechniania kultury fizycznej. Realizacja programu szkolenia sportowego w kickboxingu.</h6>
               </div>
             </div>
           </div>
           <div class="footer-copyright">
             <div class="container">
             © 2014 Copyright Text
-            <a class="grey-text text-lighten-4 right" href="#!">More Links</a>
+            
             </div>
           </div>
         </footer>
@@ -36,6 +31,10 @@
 <style scoped>
 .page-footer {
     background-color: rgb(41, 40, 40);
+}
+.icons {
+    
+  flex-flow: column;
 }
 
 </style>
