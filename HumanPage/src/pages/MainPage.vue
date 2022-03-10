@@ -2,7 +2,7 @@
 <div class="main-div">
     <the-header></the-header>
     <div class="photo">
-    <base-card></base-card>
+    <base-card style="padding: 15px"></base-card>
     </div>
     <main-card></main-card>
     <div class="main-photo">
@@ -31,7 +31,7 @@
     </div>
     <gallery></gallery>
     </div>
-
+    <the-footer></the-footer>
 </div>
 </template>
 
@@ -40,12 +40,14 @@ import TheHeader from '../components/layout/TheHeader.vue';
 import BaseCard from '../components/UI/BaseCard.vue';
 import MainCard from '../components/UI/MainCard.vue';
 import Gallery from '../components/UI/Gallery.vue';
+import TheFooter from '../components/layout/TheFooter.vue';
 export default {
     components: {
         TheHeader,
         BaseCard,
         MainCard,
-        Gallery
+        Gallery,
+        TheFooter
     },
 }
 </script>
