@@ -1,0 +1,223 @@
+ [
+    "zawodnik"{
+        "name": "Maciej Grzegowski",
+        "cadre": "Kadra Narodowa 2011/2012",
+        "achievements": [
+            "achievements"{
+                "nameAchievement": "Puchar Świata K-1 Rules Węgry",
+                "city": "Szeged 2011 r"
+            },
+            {
+                "nameAchievement": "Zawodowe mistrzostwo Polski K-1 Zawodowy pas federacji USW-M",
+                 "city": " 2014 r"
+            },
+            {
+                "nameAchievement": "Mistrz Polski Muay Thai",
+                 "city": " Świebodzice 2011 r"
+            },
+            {
+                "nameAchievement": "Vice Mistrz Europy K-1 Rules",
+                 "city": "Włochy 2011 r"
+            },
+            {
+                "nameAchievement": "Mistrz Polski Seniorów low-kick",
+                 "city": "2014 r"
+            },
+            {
+                "nameAchievement": "Międzynarodowy Mistrz Polski K-1 Rules",
+                 "city": "Gdańsk 2011 r"
+            },
+            {
+                "nameAchievement": "Mistrz Polski w Kick-Boxingu K1 i low kick",
+                 "city": "Skarżysko Kamienna 2011 r"
+            },
+            {
+                "nameAchievement": "Zwycięska Walka rankingowa na Gali Kick-Boxingu na zasadach Low-Kick",
+                 "city": "Kobyłka 2010 r"
+            },
+            {
+                "nameAchievement": "Zwycięska walka zawodowa na zasadach K-1 na meczu Polska-Ukraina",
+                 "city": "Szczecinek 2012 r"
+            },
+            {
+                "nameAchievement": "Zwycięska zawodowa Walka na Gali Power Fight Night 4",
+                 "city": "Pärnu (Estonia) 2012 r"
+            }
+        ]
+
+    },
+    "zawodnik"{
+        "name": "Tomasz Klimiuk",
+        "cadre": "Zawodnik",
+        "achievements": [
+            "achievements"{
+                "nameAchievement": "Puchar Świata",
+                "city": "Rimini (Włochy) 2016 r"
+            },
+            {
+                "nameAchievement": "Puchar Polski Kick Light",
+                 "city": "Węgrów 2011 r"
+            },
+            {
+                "nameAchievement": "I miejsce w kat. +91 kg l-k w Pucharze Polski w Kick-Boxingu",
+                 "city": " Węgrów 2011 r"
+            },
+            {
+                "nameAchievement": "Wicemistrzostwo Polski K1",
+                 "city": " Świebodzice 2013 r"
+            },
+            {
+                "nameAchievement": "II miejsce na Pucharze Świata",
+                 "city": "Inssbruck 2015 r"
+            },
+            {
+                "nameAchievement": "III miejsce mł. kat. +91 kg na Mistrzostwach Polski w kick-boxingu K1 rules jr.i mł.",
+                 "city": " Głogów 2011r"
+            },
+            {
+                "nameAchievement": "III miejsce w kat. +91 kg na Mistrzostwach Polski Muay Thai",
+                 "city": "Świebodzice 2011 r"
+            },
+            {
+                "nameAchievement": "III miejsce na MMP",
+                 "city": "Głogów 2011 r"
+            },
+            {
+                "nameAchievement": "III miejsce na MP low kick",
+                 "city": "Kleszczów 2012 r"
+            },
+            {
+                "nameAchievement": "III miejsce Mistrzostwa Polski K",
+                 "city": "Legnica 2015 r"
+            }
+        ]
+    },
+    "zawodnik"{
+        "name": "Artur Baradyn",
+        "cadre": "Zawodnik",
+        "achievements": [
+            "achievements"{
+                "nameAchievement": "Akademicki Mistrz Polski",
+                "city": "2017 r"
+            },
+            {
+                "nameAchievement": "Akademicki Mistrz Polski",
+                 "city": " Warszawa 2015 r"
+            },
+            {
+                "nameAchievement": "V-ce mistrz Polski w k1 seniorów ",
+                 "city": "2017 r"
+            },
+            {
+                "nameAchievement": "III miejsce MP K1 (juniorzy)",
+                 "city": " Świebodzice 2013 r"
+            },
+            {
+                "nameAchievement": "III miejsce Puchar Low Kick",
+                 "city": "Katowice 2013 r"
+            },
+            {
+                "nameAchievement": "Zwycięska Walka Zawodowa na Gali",
+                 "city": "Słowacja"
+            },
+            {
+                "nameAchievement": "Zwycięska Walka Zawodowa z Mistrzem Białorusi na East Side Fight",
+                 "city": "2016 r"
+            },
+            {
+                "nameAchievement": " Zwycięska Walka zawodowa na Gali",
+                 "city": "Warszawa"
+            },
+            {
+                "nameAchievement": "Udział w gali King of Kings",
+                 "city": "2017 r"
+            },
+            {
+                "nameAchievement": "Udział w galach Bushido, w tym 2 wygrane walki",
+                 "city": "2017 r"
+            }
+        ]
+    },
+    "zawodnik"{
+        "name": "Tomasz Tarnacki",
+        "cadre": "Kadra Narodowa 2011/2012",
+        "achievements": [
+            "achievements"{
+                "nameAchievement": "I miejsce na Mistrzostwach Polski w Kick-Boxingu K1 i low kick",
+                "city": "Skarżysko Kamienna 2011 r"
+            },
+            {
+                "nameAchievement": "I miejsce w kat. 91 kg na Mistrzostwach Polski w Kick-Boxingu seniorów",
+                 "city": " Kleszczów 2011 r"
+            },
+            {
+                "nameAchievement": "I miejsce low-kick w kat. 89 kg na Mistrzostwach Mazowsza",
+                 "city": "2010 r"
+            },
+            {
+                "nameAchievement": "I miejsce w kat.91 kg k1 w Pucharze Polski w Kick-Boxingu",
+                 "city": "Węgrów 2011 r"
+            },
+            {
+                "nameAchievement": "I miejsce w kat.91 kg full contact w Pucharze Polski w Kick-Boxingu",
+                 "city": "Węgrów 2011 r"
+            },
+            {
+                "nameAchievement": "III miejsce w kat. 86 kg na Mistrzostwach Polski Muay Thai",
+                 "city": "Świebodzice 2011 r"
+            },
+            {
+                "nameAchievement": "Zwycięska Walka w kat. 86 kg na zasadach K1 przez K.O. na Zawodowej Gali Kick-Boxingu Angels of Fire Exclusive",
+                 "city": "2016 r"
+            }
+        ]
+    },
+    "zawodnik"{
+        "name": "Grzegorz Kiełpiński",
+        "cadre": "Kadra Narodowa 2006-2009",
+        "achievements": [
+            "achievements"{
+                "nameAchievement": "Mistrz Świata w Kick-Boxingu",
+                "city": " Zadar (Chorwacja) 2006 r"
+            },
+            {
+                "nameAchievement": "Zawodowy Mistrz Polski na Zasadach K1",
+                 "city": " 2008 r"
+            },
+            {
+                "nameAchievement": "I miejsce na Międzynarodowym Pucharze Polski",
+                 "city": "Węgrów 2009"
+            },
+            {
+                "nameAchievement": "I miejsce w kat -75 kg na Mistrzostwach Świata w Kick-Boxingu",
+                 "city": " ŚZadar (Chorwacja) 2006 r"
+            },
+            {
+                "nameAchievement": "II miejsce w kat -75 kg na Mistrzostwach Polski Juniorów i Młodzieżowców",
+                 "city": "Katowice 2013 r"
+            },
+            {
+                "nameAchievement": " I miejsce w kat -74 kg na Mistrzostwach Polski Wschodniej",
+                 "city": "Lublin 2006 r"
+            },
+            {
+                "nameAchievement": "I miejsce w kat -74 kg na Eliminacjach do Mistrzostw Polski",
+                 "city": "Węgrów 2006 r"
+            },
+            {
+                "nameAchievement": "I miejsce w kat -75 kg na Mistrzostwach Polski Juniorów i Młodzieżowców",
+                 "city": "WŁąck k. Płocka 2005 r"
+            },
+            {
+                "nameAchievement": "II miejsce w kat. 74 kg na Eliminacjach do Mistrzostw Polski",
+                 "city": "Węgrów 2005 r"
+            },
+            {
+                "nameAchievement": "Zwycięska Walka Zawodowa na Zasadach K1 na Gali",
+                 "city": "Piotrków Trybunalski 2008 r"
+            }
+        ]
+    }
+
+
+]
