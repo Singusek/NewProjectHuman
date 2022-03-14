@@ -1,7 +1,9 @@
 <template>
     <section class="container">
         <main>
-            <h2 v-for="name in name" :key="name.cadre">{{ name.name }}</h2>
+            <h5 v-for="name in name" :key="name.id">{{ name.name }}</h5>
+            <h6 v-for="cadre in cadre" :key="cadre.id">{{ cadre.cadre }}</h6>
+            <p v-for="achievements in achievements" :key="achievements.id">{{ achievements.achievements }}</p>
         </main>
     </section>
 </template>
@@ -13,6 +15,9 @@ export default {
         data() {
             return {
                 name: playersData,
+                cadre: playersData,
+                achievements: playersData,
+                nameAchievement: playersData
         };
     },
 }
