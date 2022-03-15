@@ -1,8 +1,9 @@
  {
     "zawodnik1": {
-        "name": "Maciej Grzegowski",
-        "cadre": "Kadra Narodowa 2011/2012",
-        "achievements": [
+        "id": 1,
+        "name1": "Maciej Grzegowski",
+        "cadre1": "Kadra Narodowa 2011/2012",
+        "achievements1": [
             {
                 "nameAchievement": "Puchar Świata K-1 Rules Węgry",
                 "city": "Szeged 2011 r"
@@ -50,9 +51,9 @@
 
     },
     "zawodnik2": {
-        "name": "Tomasz Klimiuk",
-        "cadre": "Zawodnik",
-        "achievements": [
+        "name2": "Tomasz Klimiuk",
+        "cadre2": "Zawodnik",
+        "achievements2": [
             {
                 "nameAchievement": "Puchar Świata",
                 "city": "Rimini (Włochy) 2016 r"
@@ -96,9 +97,9 @@
         ]
     },
     "zawodnik3": {
-        "name": "Artur Baradyn",
-        "cadre": "Zawodnik",
-        "achievements": [
+        "name3": "Artur Baradyn",
+        "cadre3": "Zawodnik",
+        "achievements3": [
             {
                 "nameAchievement": "Akademicki Mistrz Polski",
                 "city": "2017 r"
@@ -142,9 +143,9 @@
         ]
     },
     "zawodnik4": {
-        "name": "Tomasz Tarnacki",
-        "cadre": "Kadra Narodowa 2011/2012",
-        "achievements": [
+        "name4": "Tomasz Tarnacki",
+        "cadre4": "Kadra Narodowa 2011/2012",
+        "achievements4": [
             {
                 "nameAchievement": "I miejsce na Mistrzostwach Polski w Kick-Boxingu K1 i low kick",
                 "city": "Skarżysko Kamienna 2011 r"
@@ -176,9 +177,9 @@
         ]
     },
     "zawodnik5": {
-        "name": "Grzegorz Kiełpiński",
-        "cadre": "Kadra Narodowa 2006-2009",
-        "achievements": [
+        "name5": "Grzegorz Kiełpiński",
+        "cadre5": "Kadra Narodowa 2006-2009",
+        "achievements5": [
             {
                 "nameAchievement": "Mistrz Świata w Kick-Boxingu",
                 "city": " Zadar (Chorwacja) 2006 r"
