@@ -1,4 +1,6 @@
 <template>
+<div>
+  <the-header></the-header>
     <div class="container">
         <div class="row">
   <div class="card">
@@ -37,12 +39,16 @@
             </div> -->
         </main>
     </div>
+    <the-footer></the-footer>
+</div>
 </template>
 
 <script>
+import TheFooter from '../../components/layout/TheFooter.vue';
 import playersData from '../players/players.json';
 
 export default {
+  components: { TheFooter },
     
         data() {
             return {
