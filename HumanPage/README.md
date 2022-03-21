@@ -27,3 +27,13 @@ npm run dev
 ```sh
 npm run build
 ```
+### Git branch
+ 
+ Kazdy branch musi iść od mastera 
+ -Nazwa branchu to Issue #12 nazwa 
+ -Kazdy commit to Issue #12 
+ -Po zrobieniu brancha łacze go z masterem i usuwam na git:
+ *pull request --- new pull request --- compere form barchn base: master ---- create i sprawdzanie problemow 
+ -pamietac o spojnosci nazw 
+ -kazdy nastepny branch robiony z vscode 
+ *create nwe brach from ---- 
