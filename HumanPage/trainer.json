@@ -1,0 +1,33 @@
+{
+  "trainer" :[
+    
+    {
+        "id": 1,
+        "name": "Krzysztof Humeńczyk",
+        "info": "Absolwent Akademii Wychowania Fizycznego w Warszawie Józefa Piłsudskiego, nauczyciel wychowania fizycznego, trener z kilkunastoletnim doświadczeniem, założyciel klubu 'Human Białystok', autor największych sukcesów sportowych w Białymstoku i na Podlasiu w twardych (pełny kontakt) formułach kickboxingu (K-1,low kick,full contact), zawodnicy pod jego okiem zdobyli i zdobywają najwyższe trofea na arenie światowej i krajowej. Posiada na swoim koncie Mistrzów Świata, Zdobywców Pucharów Świata i Europy v-ce mistrzów Europy i Mistrzów Polski w kategorii, która wymaga najwyższych umiejętności walki i przygotowania motorycznego czyli w seniorach, gdzie poziom kickboxingu jest najwyższy. Jego zawodnicy systematycznie powoływani są do kadry narodowej, aby godnie reprezentować nasz kraj na arenach międzynarodowych, ale także biorą udział w wielkich galach zawodowych w Polsce i na Świecie takich jak: DSF, East Side Fight, Tatralandia, King of Kings i wielu innych. Prawie wszyscy trenerzy i instruktorzy, prowadzący zajęcia z kickboxingu w Białymstoku to właśnie jego wychowankowie."
+    },
+    {
+
+         "id": 2,
+        "name":"Tomasz Klimiuk",
+        "info": "Aktywny zawodnik, instruktor z bardzo bogatym doświadczeniem ringowym i szkoleniowym kilkukrotny Mistrz Polski, zawodnik kadry narodowej, zdobywca Pucharów Polski i zawodnik zawodowego teamu DSF Kickboxing Challenge, biorący udział zarówno w rywalizacji amatorskiej jak i zawodowej."
+
+    },
+    {
+        "id": 3,
+        "name": "Maciej Grzegorzewski",
+        "info": "Instruktor,także z przeogromnym doświadczeniem ringowym. Oto część z jego dobytku, który mówi sam za siebie:"
+    },
+    {
+    "id": 4,
+        "name": "Dawid Zagórski",
+        "info": "Cały swój młodzieńczy wiek poświęcił treningom kickboxingu i przygotowaniu motorycznemu, co zaowocowało zdobyciem tytułu Mistrza Polski w K-1, duże doświadczenie ringowe pozwala mu na nauczanie na wysokim poziomie w ujęciu technicznym."
+    },
+    {
+    "id": 5,
+        "name": "Konrad Szymanowski",
+        "info": "Pasjonat kickboxingu i muay thai, były zawodnik, posiada za sobą wiele walk amatorskich, medalista wielu Mistrzostw Polski, bardzo duże doświadczenie szkoleniowe i ringowe pozwala mu na zwracanie uwagi na istotne elementy techniczne ćwiczących."
+    }
+
+]
+}

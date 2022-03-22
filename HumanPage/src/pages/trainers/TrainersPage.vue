@@ -9,7 +9,7 @@
                     <img src="src/img/trainer.jpg" alt="" class="circle responsive-img img"> <!-- notice the "circle" class -->
                     </div>
                     <div class="col s10">
-                    <span class="black-text" v-for="name in name" :key="name.id">{{ name }}</span>
+                    <span class="black-text" v-for="trainer in trainer" :key="trainer.id">{{ trainer.name }}</span>
                     </div>
                 </div>
                 </div>
@@ -20,19 +20,22 @@
 </template>
 
 <script>
+import axios from "axios";
 
 export default {
+    name: "TrainerInfo",
     data() {
         return {
-            trainer: [],
+            trainer: []
         };
     },
     async created() {
         try {
-            const res = await axions.get('trainer.json');
+            const res = await axios.get(`http://localhost:3001/trainer`);
+
             this.trainer = res.data;
-        } catch (error) {
-            console.log(error);
+        } catch (e) {
+            console.error(e);
         }
     },
 };
