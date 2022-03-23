@@ -9,7 +9,9 @@
                     <img src="src/img/trainer.jpg" alt="" class="circle responsive-img img"> <!-- notice the "circle" class -->
                     </div>
                     <div class="col s10">
-                    <span class="black-text" v-for="trainer in trainer" :key="trainer.id">{{ trainer.name }}</span>
+                    <!-- <span class="black-text" v-for="name in name" :key="name">{{ name.name }}</span> -->
+                    <p>{{ singleName }}{{ singleName.id }}</p>
+                    <!-- <p v-for="name in assingSingaleName($route.params.id)" :key="name.id">{{ name }}</p> -->
                     </div>
                 </div>
                 </div>
@@ -20,25 +22,56 @@
 </template>
 
 <script>
-import axios from "axios";
+// import axios from "axios";
+import trainer from '../trainers/trainer.json';
 
 export default {
-    name: "TrainerInfo",
+    name: 'NameSingle',
     data() {
         return {
-            trainer: []
-        };
-    },
-    async created() {
-        try {
-            const res = await axios.get(`http://localhost:3001/trainer`);
-
-            this.trainer = res.data;
-        } catch (e) {
-            console.error(e);
+            name: trainer,
+            singleName: undefined,
+            info: trainer
         }
     },
-};
+    computed: {
+        name () {
+            return this.$route.params.id
+        }
+    },
+    created() {
+        this.assingSingaleName();
+    },
+    methods: {
+        assingSingaleName() {
+            let data = this.name
+            data.filter(item => {
+                return item.id == this.id
+            });
+
+            this.singleName = data
+        }
+        
+    },
+}
+
+
+//     name: "TrainerInfo",
+//     data() {
+//         return {
+//             trainer: []
+//         };
+//     },
+//     async created() {
+//         try {
+//             const res = await axios.get(`http://localhost:3001/trainer`);
+
+//             this.trainer = res.data;
+//         } catch (e) {
+//             console.error(e);
+//         }
+//     },
+// };
 </script>
 
 <style scoped>
