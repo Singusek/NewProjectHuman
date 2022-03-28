@@ -2,7 +2,7 @@
     <div>
         <the-header></the-header>
         <div>
-         <trainer v-for="trainer in trainers" :key="trainer.id" :name="trainer.name" :info="trainer.info" :achivments="trainer.achivments"/>
+         <trainer v-for="trainer in trainers" :key="trainer.id" :id="trainer.id" :name="trainer.name" :info="trainer.info" :achivments="trainer.achivments"/>
         </div>
         <the-footer></the-footer>
     </div>
