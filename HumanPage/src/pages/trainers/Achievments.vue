@@ -1,7 +1,7 @@
 <template>
     <div>
         <!-- <achievment :title="trainer.achievments"/> -->
-        <achievment v-for="achievment in achievments" :key="achievment" :title="title.achivments"/>
+        <achievment v-for="achievment in achievments" :key="achievment" :title="title.achievments"/>
         <!-- <achievment v-for="title in achievments" :key="title"></achievment> -->
          <!-- <achievment v-for="(achievment, index) in achievments" :key="index">{{ achievment }}</achievment> -->
     </div>
