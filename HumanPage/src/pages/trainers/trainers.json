@@ -16,25 +16,44 @@
         "name": "Maciej Grzegorzewski",
         "info": "Instruktor,także z przeogromnym doświadczeniem ringowym. Oto część z jego dobytku, który mówi sam za siebie:",
         "achievments": [
-            "Puchar Świata K-1 Rules Węgry, Szeged 2011 r.",
-            "Zawodowe mistrzostwo Polski K-1 Zawodowy pas federacji USW-M, 2014",
-            "Mistrz Polski Muay Thai, Świebodzice 2011",
-            "Vice Mistrz Europy K-1 Rules, Włochy 2011",
-            "Mistrz Polski Seniorów low-kick, 2014",
-            "Międzynarodowy Mistrz Polski K-1 Rules, Gdańsk 2011",
-            "Międzynarodowy Mistrz Litwy seniorów K-1 Rules 63.5kg, 2012",
-            "Międzynarodowy Mistrz Litwy seniorów K-1 Rules 67kg, 2012",
-            "Mistrz Polski Kick-Boxing K-1 Rules, Głogów 2010",
-            "Mistrz Polski Kick-Boxing K-1 Rules, Głogów 2011",
-            "Mistrz Polski w Kick-Boxingu K1 i low kick, Skarżysko Kamienna 2011",
-            "Najlepszy zawodnik Mistrzostw Polski w Kick-Boxingu K1 i low-kick, Skarżysko Kamienna 2011",
-            "Puchar Polski full contact, Węgrów 2010",
-            "Zwycięska zawodowa Walka na Gali Power Fight Night 4, Pärnu (Estonia) 2012",
-            "Zwycięska Walka na Gali Sportów Walki na zasadach K-1 Rules, Wasilków 2011",
-            "Zwycięska zawodowa Walka Na Gali Sportów Walki K-1 Rules, Wasilków 2012",
-            "Zwycięska Walka rankingowa na Gali Kick-Boxingu na zasadach Low-Kick, Kobyłka 2010",
-            "Zwycięska walka zawodowa na zasadach K-1 na meczu Polska-Ukraina, Szczecinek 2012",
-            "Zwycięska zawodowa walka w federacji Maxx Fight na zasadach K-1 Rules, 2012"]
+            {
+           "title": "Puchar Świata K-1 Rules Węgry, Szeged 2011 r."
+            }, {
+           "title": "Zawodowe mistrzostwo Polski K-1 Zawodowy pas federacji USW-M, 2014"
+            }, {
+           "title": "Mistrz Polski Muay Thai, Świebodzice 2011"
+            }, {
+           "title": "Vice Mistrz Europy K-1 Rules, Włochy 2011"
+            }, {
+           "title": "Międzynarodowy Mistrz Polski K-1 Rules, Gdańsk 2011"
+            }, {
+           "title":  "Międzynarodowy Mistrz Litwy seniorów K-1 Rules 63.5kg, 2012"
+            }, {
+           "title": "Międzynarodowy Mistrz Litwy seniorów K-1 Rules 67kg, 2012"
+            }, {
+           "title": "Mistrz Polski Kick-Boxing K-1 Rules, Głogów 2010"
+            }, {
+           "title": "Mistrz Polski Kick-Boxing K-1 Rules, Głogów 2011"
+           }, {
+           "title": "Mistrz Polski w Kick-Boxingu K1 i low kick, Skarżysko Kamienna 2011"
+           }, {
+           "title": "Najlepszy zawodnik Mistrzostw Polski w Kick-Boxingu K1 i low-kick, Skarżysko Kamienna 2011"
+           }, {
+           "title": "Puchar Polski full contact, Węgrów 2010"
+           }, {
+           "title": "Zwycięska zawodowa Walka na Gali Power Fight Night 4, Pärnu (Estonia) 2012"
+           }, {
+           "title": "Zwycięska Walka na Gali Sportów Walki na zasadach K-1 Rules, Wasilków 2011"
+           }, {
+           "title": "Zwycięska zawodowa Walka Na Gali Sportów Walki K-1 Rules, Wasilków 2012"
+           }, {
+           "title": "Zwycięska Walka rankingowa na Gali Kick-Boxingu na zasadach Low-Kick, Kobyłka 2010"
+           }, {
+           "title": "Zwycięska walka zawodowa na zasadach K-1 na meczu Polska-Ukraina, Szczecinek 2012"
+           }, {
+           "title": "Zwycięska zawodowa walka w federacji Maxx Fight na zasadach K-1 Rules, 2012"
+        }
+        ]
     },
     {
     "id": 4,

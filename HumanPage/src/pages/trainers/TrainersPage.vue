@@ -11,7 +11,7 @@
 <script>
 import Trainer from './Trainer.vue';
 import trainers from './trainers.json';
-import Achievment from './Achievment.vue';
+import Achievment from './Achievments.vue';
 
 export default {
     data() {

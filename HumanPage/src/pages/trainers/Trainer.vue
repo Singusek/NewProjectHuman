@@ -11,7 +11,7 @@
                     <div>{{ name }}</div>
                     <div>{{ info }}</div>
                     <br/>
-                    <achievments :achievments="trainer.achievments"></achievments>
+                    <achievments></achievments>
                     </div>
                 </div>
                 </div>
@@ -21,7 +21,7 @@
 </template>
 
 <script>
-import Achievments from './Achievment.vue';
+import Achievments from './Achievments.vue';
 import trainers from './trainers.json';
 
 export default {
