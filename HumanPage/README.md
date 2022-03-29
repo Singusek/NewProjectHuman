@@ -37,3 +37,5 @@ npm run build
  -pamietac o spojnosci nazw 
  -kazdy nastepny branch robiony z vscode 
  *create nwe brach from ---- 
+
+ 

@@ -11,7 +11,7 @@
                     <div>{{ name }}</div>
                     <div>{{ info }}</div>
                     <br/>
-                    <div v-for="(achivment, index) in achivments" :key="index">{{ achivment }}</div>
+                    <achievments :achievments="trainer.achievments"></achievments>
                     </div>
                 </div>
                 </div>
@@ -21,12 +21,23 @@
 </template>
 
 <script>
+import Achievments from './Achievment.vue';
+import trainers from './trainers.json';
+
 export default {
+    data() {
+        return {
+            trainers: trainers
+        }
+    },
+    components: {
+        Achievments
+    },
     props: {
         name: String, 
         info: String, 
         id: Number,
-        achivments:{
+        achievments:{
             type: Array,
             required: true
         }
