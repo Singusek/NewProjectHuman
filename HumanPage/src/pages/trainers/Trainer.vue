@@ -11,7 +11,8 @@
                     <div>{{ name }}</div>
                     <div>{{ info }}</div>
                     <br/>
-                    <achievments :achievments="trainer.achievments"></achievments>
+                    <achievments  :achievments="trainer.achievments"></achievments>
+                    <!-- <achievments v-for="trainer in trainers" :key="trainer.id" :achievments="trainer.achievments"></achievments> -->
                     </div>
                 </div>
                 </div>
