@@ -11,7 +11,7 @@
                     <div>{{ name }}</div>
                     <div>{{ info }}</div>
                     <br/>
-                    <achievments></achievments>
+                    <achievments :achievments="trainer.achievments"></achievments>
                     </div>
                 </div>
                 </div>
