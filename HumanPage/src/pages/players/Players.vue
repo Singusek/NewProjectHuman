@@ -59,7 +59,7 @@
 
 <script>
 import TheFooter from '../../components/layout/TheFooter.vue';
-import playersData from '../players/players.json';
+import playersData from '../data-json/players.json';
 
 export default {
   components: { TheFooter },

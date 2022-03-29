@@ -3,7 +3,7 @@
 </template>
 
 <script>
-import trainers from './trainers.json';
+import trainers from '../data-json/trainers.json';
 
 export default {
     data() {
@@ -12,9 +12,5 @@ export default {
         }
     },
     props: ['title'],
-    computed() {
-            console.log(this.title + 'error title');
-        
-    }
 }
 </script>
