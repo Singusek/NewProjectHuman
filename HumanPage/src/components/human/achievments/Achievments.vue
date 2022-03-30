@@ -9,18 +9,12 @@
 
 <script>
 import Achievment from '../achievment/Achievment.vue';
-import TRAINERS_JSON from '../../../data/TRAINERS_JSON.json';
+
 
 export default{
   components: {
        Achievment 
        }, 
-    data() {
-        return {
-            TRAINERS_JSON: TRAINERS_JSON,
-            achievments: TRAINERS_JSON
-        }
-    },
     props: {
         achievments:{
             type: Array,
