@@ -2,10 +2,10 @@ import { createApp } from 'vue'
 import App from './App.vue'
 import router from './router'
 import 'materialize-css'
-import BaseButton from '../src/components/human/UI/BaseButton.vue';
-import ContactCard from '../src/components/human/UI/ContactCard.vue';
-import TheHeader from '../src/components/human/layout/TheHeader.vue';
-import TheFooter from '../src/components/human/layout/TheFooter.vue';
+import BaseButton from '../src/components/UI/BaseButton.vue';
+import ContactCard from '../src/components/UI/ContactCard.vue';
+import TheHeader from '../src/components/layout/TheHeader.vue';
+import TheFooter from '../src/components/layout/TheFooter.vue';
 
 const app = createApp(App)
 

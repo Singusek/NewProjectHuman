@@ -58,7 +58,7 @@
 </template>
 
 <script>
-import TheFooter from '../layout/TheFooter.vue';
+import TheFooter from '../../layout/TheFooter.vue';
 import playersData from '../../../data/PLAYERS_JSON.json';
 
 export default {
