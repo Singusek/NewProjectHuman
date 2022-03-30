@@ -23,8 +23,8 @@
 </template>
 
 <script>
-import Achievments from '../achievments/Achievments.vue';
-import TRAINERS_JSON from '../data/TRAINERS_JSON.json';
+import Achievments from '../../components/achievments/Achievments.vue';
+import TRAINERS_JSON from '../../components/data/TRAINERS_JSON.json';
 
 export default {
     data() {

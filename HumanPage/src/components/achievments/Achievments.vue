@@ -5,8 +5,8 @@
 </template>
 
 <script>
-import Achievment from '../achievments/Achievment.vue';
-import TRAINERS_JSON from '../data/TRAINERS_JSON.json';
+import Achievment from '../../components/achievments/Achievment.vue';
+import TRAINERS_JSON from '../../components/data/TRAINERS_JSON.json';
 
 export default{
   components: {

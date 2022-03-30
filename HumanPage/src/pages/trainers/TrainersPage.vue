@@ -15,9 +15,9 @@
 
 <script>
 import Trainer from './Trainer.vue';
-import TRAINERS_JSON from '../data/TRAINERS_JSON.json';
-import Achievment from '../achievments/Achievment.vue';
-import ABOUTUS_JSON from '../data/ABOUTUS_JSON.json';
+import TRAINERS_JSON from '../../components/data/TRAINERS_JSON.json';
+import Achievment from '../../components/achievments/Achievment.vue';
+import ABOUTUS_JSON from '../../components/data/ABOUTUS_JSON.json';
 
 export default {
     data() {
