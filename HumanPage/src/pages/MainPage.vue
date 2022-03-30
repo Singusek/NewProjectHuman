@@ -36,11 +36,11 @@
 </template>
 
 <script>
-import TheHeader from '../components/layout/TheHeader.vue';
-import BaseCard from '../components/UI/BaseCard.vue';
-import MainCard from '../components/UI/MainCard.vue';
-import Gallery from '../components/UI/Gallery.vue';
-import TheFooter from '../components/layout/TheFooter.vue';
+import TheHeader from '../components/human/layout/TheHeader.vue';
+import BaseCard from '../components/human/UI/BaseCard.vue';
+import MainCard from '../components/human/UI/MainCard.vue';
+import Gallery from '../components/human/UI/Gallery.vue';
+import TheFooter from '../components/human/layout/TheFooter.vue';
 export default {
     components: {
         TheHeader,

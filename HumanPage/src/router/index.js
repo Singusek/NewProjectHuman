@@ -4,9 +4,9 @@ import ContactPage from '../pages/ContactPage.vue';
 import MainPage from '../pages/MainPage.vue';
 import PriceList from '../pages/PriceList.vue';
 import TimeTable from '../pages/TimeTable.vue';
-import Players from '../components/players/Players.vue';
+import Players from '../components/human/players/Players.vue';
 import NotFound from '../pages/NotFound.vue';
-import Trainers from '../components/trainers/Trainers.vue';
+import Trainers from '../components/human/trainers/Trainers.vue';
 
 const router = createRouter({
     history: createWebHistory(),

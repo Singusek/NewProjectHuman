@@ -8,8 +8,8 @@
 </template>
 
 <script>
-import Achievment from '../../components/achievment/Achievment.vue';
-import TRAINERS_JSON from '../../data/TRAINERS_JSON.json';
+import Achievment from '../achievment/Achievment.vue';
+import TRAINERS_JSON from '../../../data/TRAINERS_JSON.json';
 
 export default{
   components: {

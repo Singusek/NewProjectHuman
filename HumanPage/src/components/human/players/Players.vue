@@ -58,8 +58,8 @@
 </template>
 
 <script>
-import TheFooter from '../../components/layout/TheFooter.vue';
-import playersData from '../../data/PLAYERS_JSON.json';
+import TheFooter from '../layout/TheFooter.vue';
+import playersData from '../../../data/PLAYERS_JSON.json';
 
 export default {
   components: { TheFooter },

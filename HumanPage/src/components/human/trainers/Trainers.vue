@@ -21,8 +21,8 @@
 <script>
 import Trainer from '../trainer/Trainer.vue';
 import Achievment from '../achievment/Achievment.vue';
-import TRAINERS_JSON from '../../data/TRAINERS_JSON.json';
-import ABOUTUS_JSON from '../../data/ABOUTUS_JSON.json';
+import TRAINERS_JSON from '../../../data/TRAINERS_JSON.json';
+import ABOUTUS_JSON from '../../../data/ABOUTUS_JSON.json';
 
 export default {
     data() {

@@ -26,9 +26,9 @@
 </template>
 
 <script>
-import TheHeader from '../components/layout/TheHeader.vue';
-import FormContact from '../components/layout/FormContact.vue';
-import TheFooter from '../components/layout/TheFooter.vue';
+import TheHeader from '../components/human/layout/TheHeader.vue';
+import FormContact from '../components/human/layout/FormContact.vue';
+import TheFooter from '../components/human/layout/TheFooter.vue';
 
 export default {
     components: {
