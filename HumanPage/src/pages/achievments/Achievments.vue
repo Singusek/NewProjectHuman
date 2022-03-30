@@ -6,7 +6,7 @@
 
 <script>
 import Achievment from '../achievments/Achievment.vue';
-import trainers from '../data-json/trainers.json';
+import TRAINERS_JSON from '../data/TRAINERS_JSON.json';
 
 export default{
   components: {
@@ -14,8 +14,8 @@ export default{
        }, 
     data() {
         return {
-            trainers: trainers,
-            achievments: trainers
+            TRAINERS_JSON: TRAINERS_JSON,
+            achievments: TRAINERS_JSON
         }
     },
     props: {

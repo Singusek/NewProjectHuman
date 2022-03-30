@@ -24,12 +24,12 @@
 
 <script>
 import Achievments from '../achievments/Achievments.vue';
-import trainers from '../data-json/trainers.json';
+import TRAINERS_JSON from '../data/TRAINERS_JSON.json';
 
 export default {
     data() {
         return {
-            trainers: trainers
+            TRAINERS_JSON: TRAINERS_JSON
         }
     },
     components: {

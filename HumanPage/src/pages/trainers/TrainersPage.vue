@@ -3,11 +3,11 @@
         <the-header></the-header>
         <div>
         <h4 class="center-align title">O NAS</h4>
-        <div class="container">{{ aboutUs.text }}</div>
+        <div class="container">{{ ABOUTUS_JSON.text }}</div>
         </div>
-        <h5 class="trainer-text center-align ">TRENERZY</h5>
+        <h5 class="trainer-text center-align">TRENERZY</h5>
         <div>
-         <trainer v-for="trainer in trainers" :key="trainer.id" :id="trainer.id" :name="trainer.name" :info="trainer.info" :achievments="trainer.achievments"/>
+         <trainer v-for="trainer in TRAINERS_JSON" :key="trainer.id" :id="trainer.id" :name="trainer.name" :info="trainer.info" :achievments="trainer.achievments"/>
         </div>
         <the-footer></the-footer>
     </div>
@@ -15,15 +15,15 @@
 
 <script>
 import Trainer from './Trainer.vue';
-import trainers from '../data-json/trainers.json';
+import TRAINERS_JSON from '../data/TRAINERS_JSON.json';
 import Achievment from '../achievments/Achievment.vue';
-import aboutUs from '../data-json/about-us.json';
+import ABOUTUS_JSON from '../data/ABOUTUS_JSON.json';
 
 export default {
     data() {
         return {
-            trainers: trainers,
-            aboutUs: aboutUs
+            TRAINERS_JSON: TRAINERS_JSON,
+            ABOUTUS_JSON: ABOUTUS_JSON
         }
     },
     components: {
