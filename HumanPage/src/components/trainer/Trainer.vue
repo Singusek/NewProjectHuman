@@ -1,8 +1,8 @@
 <template>
 <div>
     <div>
-            <div class="col s12 m8 offset-m2 l6 offset-l3 z-depth-3">
-                <div class="card-panel blue-grey darken-4 white-text">
+         <div class="col s12 m8 offset-m2 l6 offset-l3 z-depth-3">
+            <div class="card-panel blue-grey darken-4 white-text">
                 <div class="row valign-wrapper">
                     <div class="container">
                     <div class="col s2">
@@ -12,19 +12,19 @@
                     <div class="col s10">
                     <div>{{ info }}</div>
                     <br/>
-                    <achievments  :achievments="achievments"></achievments>
+                    <achievments :achievments="achievments"></achievments>
                     </div>
                     </div>
-                </div>
                 </div>
             </div>
         </div>
+    </div>
 </div>
 </template>
 
 <script>
 import Achievments from '../../components/achievments/Achievments.vue';
-import TRAINERS_JSON from '../../components/data/TRAINERS_JSON.json';
+import TRAINERS_JSON from '../../data/TRAINERS_JSON.json';
 
 export default {
     data() {

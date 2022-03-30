@@ -1,12 +1,15 @@
 <template>
     <div>
-        <achievment v-for="achievment in achievments" :key="achievment" :title="achievment.title"/>
+        <achievment 
+        v-for="achievment in achievments" 
+        :key="achievment" 
+        :title="achievment.title"/>
     </div>
 </template>
 
 <script>
-import Achievment from '../../components/achievments/Achievment.vue';
-import TRAINERS_JSON from '../../components/data/TRAINERS_JSON.json';
+import Achievment from '../../components/achievment/Achievment.vue';
+import TRAINERS_JSON from '../../data/TRAINERS_JSON.json';
 
 export default{
   components: {

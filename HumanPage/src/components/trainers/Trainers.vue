@@ -7,17 +7,22 @@
         </div>
         <h5 class="trainer-text center-align">TRENERZY</h5>
         <div>
-         <trainer v-for="trainer in TRAINERS_JSON" :key="trainer.id" :id="trainer.id" :name="trainer.name" :info="trainer.info" :achievments="trainer.achievments"/>
+         <trainer 
+         v-for="trainer in TRAINERS_JSON" 
+         :key="trainer.id" :id="trainer.id" 
+         :name="trainer.name" 
+         :info="trainer.info" 
+         :achievments="trainer.achievments"/>
         </div>
         <the-footer></the-footer>
     </div>
 </template>
 
 <script>
-import Trainer from './Trainer.vue';
-import TRAINERS_JSON from '../../components/data/TRAINERS_JSON.json';
-import Achievment from '../../components/achievments/Achievment.vue';
-import ABOUTUS_JSON from '../../components/data/ABOUTUS_JSON.json';
+import Trainer from '../trainer/Trainer.vue';
+import Achievment from '../achievment/Achievment.vue';
+import TRAINERS_JSON from '../../data/TRAINERS_JSON.json';
+import ABOUTUS_JSON from '../../data/ABOUTUS_JSON.json';
 
 export default {
     data() {

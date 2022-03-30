@@ -3,7 +3,7 @@
 </template>
 
 <script>
-import TRAINERS_JSON from '../../components/data/TRAINERS_JSON.json';
+import TRAINERS_JSON from '../../data/TRAINERS_JSON.json';
 
 export default {
     data() {
