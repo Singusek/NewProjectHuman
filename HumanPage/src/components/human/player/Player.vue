@@ -1,6 +1,6 @@
 <template>
     <div>
-    <div>
+        <div>
          <div class="col s12 m8 offset-m2 l6 offset-l3 z-depth-3">
             <div class="card-panel">
                 <div class="row valign-wrapper">

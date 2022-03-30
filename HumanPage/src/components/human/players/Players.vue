@@ -29,10 +29,7 @@ export default {
          PLAYERS_JSON: PLAYERS_JSON
       };
   },
-    
 }
-
-
 </script>
 
 <style scoped>

@@ -10,7 +10,6 @@
 <script>
 import Achievment from '../achievment/Achievment.vue';
 
-
 export default{
   components: {
        Achievment 
