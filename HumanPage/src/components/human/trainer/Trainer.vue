@@ -3,13 +3,18 @@
     <div class="container">
     <div class="row">
     <div class="col s12 m12 l8 xl3 center-align">
-        <img src="src/img/trainer.png" alt="" class="center-align circle img responsive-img" >
+        <img 
+        src="src/img/trainer.png" 
+        alt="" 
+        class="center-align circle img responsive-img" />
         <div class="center-align name">{{ name }}</div>
     </div>
     <div class="col s12 m12 l8 xl8">
         <div class="info">{{ info }}</div>
         <br/>
-        <achievments class="info" :achievments="achievments"></achievments>
+        <achievments 
+        class="info" 
+        :achievments="achievments"/>
     </div>
     </div>
     </div>
