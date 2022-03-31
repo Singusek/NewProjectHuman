@@ -1,5 +1,5 @@
 <template>
-<div>
+<div class="all blue-grey darken-4 white-text">
     <div class="container">
     <div class="row">
     <div class="col s12 m12 l8 xl3 center-align">
@@ -45,6 +45,7 @@ export default {
 <style scoped>
 .img {
     border:  5px rgb(202, 130, 21) solid;
+    margin-top: 30px;
 }
 .card-panel {
     margin: 2px;
@@ -56,5 +57,12 @@ export default {
 .valign-wrapper {
     margin-top: 50px;
     margin-bottom: 50px;
+}
+.all {
+border: 1px rgb(0, 0, 0) solid;
+margin: 0px 0px;
+}
+.info {
+margin-top: 30px;
 }
 </style>
