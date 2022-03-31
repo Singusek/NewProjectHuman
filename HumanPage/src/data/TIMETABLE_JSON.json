@@ -1,0 +1,182 @@
+[
+   {
+       "day": "Poniedziałek",
+       "trainings" : [
+           {
+               "type": "techniczny",
+               "time": "9:00 - 10:20"
+           },
+           {
+                "type": "techniczny",
+                "time": "17:30 - 18:50"
+            },
+            {
+                "type": "techniczny",
+                "time": "18:50 - 20:10"
+            },
+
+            {
+                "type": "techniczny",
+                "time": "20:10 - 21:30"
+            },
+            {
+                "type": " ",
+                "time": " "
+            },
+            {
+                "type": " ",
+                "time": " "
+            }
+       ]
+   },
+   {
+    "day": "Wtorek",
+    "trainings" : [
+            {
+                "type": " ",
+                "time": " "
+            },
+            {
+                "type": " ",
+                "time": " "
+            },
+            {
+                "type": " ",
+                "time": " "
+            },
+
+            {
+                "type": " ",
+                "time": " "
+            },
+            {
+                "type": " ",
+                "time": " "
+            },
+            {
+                "type": "motoryczny",
+                "time": "19:00 - 20:20"
+            }
+        ]
+    },
+    {
+        "day": "Środa",
+        "trainings" : [
+            {
+                "type": "techniczny",
+                "time": "9:00 - 10:20"
+            },
+            {
+                 "type": "techniczny",
+                 "time": "17:30 - 18:50"
+             },
+             {
+                 "type": "techniczny",
+                 "time": "18:50 - 20:10"
+             },
+ 
+             {
+                 "type": "techniczny",
+                 "time": "20:10 - 21:30"
+             },
+             {
+                 "type": " ",
+                 "time": " "
+             },
+             {
+                 "type": " ",
+                 "time": " "
+             }
+        ]
+    },
+    {
+        "day": "Czwartek",
+        "trainings" : [
+                {
+                    "type": " ",
+                    "time": " "
+                },
+                {
+                    "type": " ",
+                    "time": " "
+                },
+                {
+                    "type": " ",
+                    "time": " "
+                },
+    
+                {
+                    "type": " ",
+                    "time": " "
+                },
+                {
+                    "type": "stretching",
+                    "time": "19:00 - 20:20"
+                },
+                {
+                    "type": " ",
+                    "time": " "
+                }
+            ]
+        },
+        {
+        "day": "Piątek",
+        "trainings" : [
+            {
+                "type": "techniczny",
+                "time": "9:00 - 10:20"
+            },
+            {
+                 "type": "techniczny",
+                 "time": "17:30 - 18:50"
+             },
+             {
+                 "type": "techniczny",
+                 "time": "18:50 - 20:10"
+             },
+ 
+             {
+                 "type": "techniczny",
+                 "time": "20:10 - 21:30"
+             },
+             {
+                 "type": " ",
+                 "time": " "
+             },
+             {
+                 "type": " ",
+                 "time": " "
+             }
+        ]
+    },
+    {
+        "day": "Sobota",
+        "trainings" : [
+            {
+                "type": "motoryczny",
+                "time": "9:00 - 10:20"
+            },
+            {
+                 "type": " ",
+                 "time": " "
+             },
+             {
+                 "type": " ",
+                 "time": " "
+             },
+ 
+             {
+                 "type": " ",
+                 "time": " "
+             },
+             {
+                 "type": " ",
+                 "time": " "
+             },
+             {
+                 "type": " ",
+                 "time": " "
+             }
+        ]
+    }
+]
