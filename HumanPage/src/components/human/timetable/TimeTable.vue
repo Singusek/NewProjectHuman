@@ -1,14 +1,21 @@
 <template>
         <div>
-           <table class="container">
-            <tr class="first-table">
-                <td class="day-table">{{ day }}</td> 
-                <td class="trening"
+           <table>
+            <thead>
+            <tr>
+                <th class="day-table">{{ day }}</th> 
+            </tr>
+            </thead>
+            <tbody>
+            <tr>
+                <th class="trening"
                 v-for="trening in trainings" 
                 :key="trening" 
                 :type="trening.type"
-                :time="trening.time">{{ trening.type }} <br/> {{ trening.time }}</td> 
+                :time="trening.time">{{ trening.type }} <br/> {{ trening.time }}</th> 
             </tr>
+            </tbody>
+
             </table>
         </div>
 </template>
@@ -31,30 +38,28 @@ export default {
 
 
 <style scoped>
-td { 
+th { 
     border: 1px solid black; 
-    width: 100px;
+    display: block;
     } 
-table {
-    background: #000;
-    background: linear-gradient(rgb(235, 135, 41, 0.3) 5%, rgba(255, 255, 255, 0.9) 100%);
-    }
-.container {
-    padding-top: 20px;
-}
-.first-table {
-    background-color: rgba(235, 135, 41, 0.3);
+.trening {
+    background-color: rgba(235, 135, 41, 0.2);
 
 }
-td:hover {
+.trening:hover {
     background-color: rgb(235, 135, 41);
 }
 .day-table {
     background-color: rgba(235, 135, 41, 0.5);
     text-align: center;
-    width: 150px;
+    
 }
 .trening {
     text-align: center;
+    height: 80px;
+    width: 150px;
+}
+tr {
+    display: block;
 }
 </style>

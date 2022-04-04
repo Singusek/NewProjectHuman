@@ -28,5 +28,7 @@ export default {
 <style scoped>
 .table {
 margin: 80px 0px;
+ display: flex;
+ justify-content: center;
 }
 </style>
