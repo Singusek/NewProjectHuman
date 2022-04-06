@@ -3,7 +3,7 @@ import { createRouter, createWebHistory } from 'vue-router';
 import ContactPage from '../pages/ContactPage.vue';
 import MainPage from '../pages/MainPage.vue';
 import PriceList from '../pages/PriceList.vue';
-import TimeTables from '../components/human/timetables/TimeTables.vue';
+import TimeTables from '../components/human/timetable/TimeTable.vue';
 import Players from '../components/human/players/Players.vue';
 import NotFound from '../pages/NotFound.vue';
 import Trainers from '../components/human/trainers/Trainers.vue';
