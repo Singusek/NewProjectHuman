@@ -15,7 +15,6 @@
                </div>
                <div class="card-action">
                    <a href="#">More details</a>
-                   <a href="#">View</a>
                </div>
            </div>
        </div>
@@ -33,7 +32,6 @@
                </div>
                <div class="card-action">
                    <a href="#">More details</a>
-                   <a href="#">View</a>
                </div>
            </div>
        </div>
@@ -51,7 +49,6 @@
                </div>
                <div class="card-action">
                    <a href="#">More details</a>
-                   <a href="#">View</a>
                </div>
            </div>
        </div>
