@@ -17,7 +17,7 @@
 
 <script>
 import TIMETABLE_JSON from '../../../data/TIMETABLE_JSON.json';
-import Trening from '../timetable/Trening.vue';
+import Trening from '../trening/Trening.vue';
 export default {
     data() {
         return {
