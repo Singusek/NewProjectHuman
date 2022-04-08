@@ -2,29 +2,34 @@
 <div class="main-div">
     <the-header></the-header>
     <div class="photo">
-    <base-card style="padding: 15px"></base-card>
+    <base-card></base-card>
     </div>
     <main-card style="padding-top: 30px;"></main-card>
     <div class="main-photo">
-    <div class="photo">
+    <div class="photo-icons row">
         <div class="h5"> 
-        <h5 class="icons">Trenując z nami kształtujesz :</h5>
+        <h5 class="icons-text">Trenując z nami kształtujesz :</h5>
         </div>
         <a style="display: flex" class="op">
-            <div class="icons">
-            <img src="src/img/technika.png" style="margin: 20px; padding: 25px" />
+            <div class="icons col s4">
+            <img  src="src/img/technika.png" 
+            />
             <h6>Technika</h6>
             </div>
-            <div>
-            <img src="src/img/biceps.png" style="margin: 20px; padding: 25px"/>
-            <h6 class="icons" style="padding-bottom: 25px;">Siła</h6>
+            <div class="col s4 icons">
+            <img src="src/img/biceps.png" 
+            />
+            <h6 class="icons" 
+            style="padding-bottom: 25px;">Siła</h6>
             </div>
-            <div>
-            <img src="src/img/mozg.png" style="margin: 20px; padding: 25px"/>
+            <div class="col s4 icons">
+            <img src="src/img/mozg.png" 
+            />
             <h6 class="icons">Charakter</h6>
             </div>
-            <div>
-            <img src="src/img/serce.png" style="margin: 20px; padding: 25px"/>
+            <div class="col s4 icons">
+            <img src="src/img/serce.png" 
+            />
             <h6 class="icons">Kondycja</h6>
             </div>
         </a>
@@ -56,15 +61,22 @@ export default {
 <style>
 .photo {
     background-color: rgb(54, 53, 53);  
-    padding: 15px;
+}
+.photo-icons {
+    background-color: rgb(54, 53, 53);  
+    height: 400px;
 }
 
 .icons {
     color: white;
+    margin-top: 30px;
+}
+.icons-text {
+    color: white;
+    margin-top: 20px;
 }
 .op {
     justify-content: center;
-    padding: 10px;
     text-align:center;
 }
 .h5 {

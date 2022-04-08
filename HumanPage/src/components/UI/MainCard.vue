@@ -1,10 +1,10 @@
 <template>
 <div class="container">
-   <div class="row" style="display: flex">
-       <div class="col s12 16">
+   <div class="row" >
+       <div class="col s4 m4 l8 ">
            <div class="card">
                <div class="card-image">
-                   <img src="src/img/1.jpg" alt="" />
+                   <img src="src/img/1.jpg" class="responsive-img" alt="" />
                    <a href="#" class="halfway-fab btn-floating orange darken-2 pulse">
                        <i class="material-icons">fitness_center</i>
                    </a>
@@ -15,14 +15,13 @@
                </div>
                <div class="card-action">
                    <a href="#">More details</a>
-                   <a href="#">View</a>
                </div>
            </div>
        </div>
-       <div class="col s12 16">
+       <div class="col s4 m4 l8">
            <div class="card">
                <div class="card-image">
-                   <img src="src/img/2.jpg" alt="" />
+                   <img src="src/img/2.jpg" class="responsive-img" alt="" />
                    <a href="#" class="halfway-fab btn-floating orange darken-2 pulse">
                        <i class="material-icons">fitness_center</i>
                    </a>
@@ -33,14 +32,13 @@
                </div>
                <div class="card-action">
                    <a href="#">More details</a>
-                   <a href="#">View</a>
                </div>
            </div>
        </div>
-       <div class="col s12 16">
+       <div class="col s4 m4 l8">
            <div class="card">
                <div class="card-image">
-                   <img src="src/img/3.jpg" alt="" />
+                   <img src="src/img/3.jpg" alt="" class="responsive-img"/>
                    <a href="#" class="halfway-fab btn-floating orange darken-2 pulse">
                        <i class="material-icons">fitness_center</i>
                    </a>
@@ -51,7 +49,6 @@
                </div>
                <div class="card-action">
                    <a href="#">More details</a>
-                   <a href="#">View</a>
                </div>
            </div>
        </div>
@@ -59,3 +56,9 @@
 </div>
 
 </template>
+
+<style scoped>
+.row {
+display: flex;
+}
+</style>
