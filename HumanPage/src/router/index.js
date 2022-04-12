@@ -7,7 +7,6 @@ import TimeTables from '../components/human/timetable/TimeTable.vue';
 import Players from '../components/human/players/Players.vue';
 import NotFound from '../pages/NotFound.vue';
 import Trainers from '../components/human/trainers/Trainers.vue';
-import Table2 from '../components/human/timetable/TableComponent.vue';
 
 const router = createRouter({
     history: createWebHistory(),
@@ -20,7 +19,6 @@ const router = createRouter({
         { path: '/players', component: Players },
         { path: '/about-us', component: Trainers },
         { path: '/:notFound(.*)', component: NotFound },
-        { path: '/Table2', component: Table2  },
     ]
 });
 
