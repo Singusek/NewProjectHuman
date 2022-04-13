@@ -1,6 +1,5 @@
 <template>
 <div class="main-div">
-    <the-header></the-header>
     <div class="photo">
     <base-card></base-card>
     </div>
@@ -36,7 +35,6 @@
     </div>
     <gallery style="padding-bottom: 40px;"></gallery>
     </div>
-    <the-footer></the-footer>
 </div>
 </template>
 

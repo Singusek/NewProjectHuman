@@ -1,6 +1,5 @@
 <template>
     <div>
-        <the-header></the-header>
         <div>
         <h4 class="center-align title">O NAS</h4>
         <div class="container">{{ ABOUTUS_JSON.text }}</div>
@@ -14,7 +13,6 @@
          :info="trainer.info" 
          :achievments="trainer.achievments"/>
         </div>
-        <the-footer></the-footer>
     </div>
 </template>
 

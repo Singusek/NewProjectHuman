@@ -10,7 +10,7 @@
             "type": "chrome",
       "request": "launch",
       "name": "vuejs: chrome",
-      "url": "http://localhost:3000/timetable",
+      "url": "http://localhost:3000",
       "webRoot": "${workspaceFolder}/src",
       "breakOnLoad": true,
       "sourceMapPathOverrides": {

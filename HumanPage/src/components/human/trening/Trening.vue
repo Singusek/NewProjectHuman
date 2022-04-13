@@ -1,13 +1,16 @@
 <template>
-<div class="container">
+<div class="container table">
     <div class="row">
-      <div class="col s12 m6 l2 xl2 day"><p>{{ day }}</p>
+      <div class="col s12 m12 l2 xl2 day">
+          <p>{{ day }}</p>
       <div>
       <div class="col s12 m12 l12 xl12 trning"
             v-for="trening in trainings" 
             :key="trening" 
             :type="trening.type"
-            :time="trening.time">{{ trening.type }}<br/>{{ trening.time }}</div>
+            :time="trening.time">
+            {{ trening.type }}<br/>
+            {{ trening.time }}</div>
       </div>
       </div>
     </div>
@@ -29,6 +32,8 @@ export default {
     border: 1px solid black; 
     text-align: center;  
     background-color: rgba(235, 135, 41, 0.37);
+    
+
 }
 .trning {
     width: 150px;

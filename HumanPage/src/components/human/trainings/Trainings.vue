@@ -1,23 +1,16 @@
 <template>
-<div style="height: 700px;">
-    <div>
-        <trening
+    <div class="row">
+        <training
+        class="col s12 m12 l2 xl2 traninigs"
         v-for="timetable in TIMETABLE_JSON" 
         :key="timetable" 
-        :day="timetable.day"
         :trainings="timetable.trainings"/>
     </div>
-<div>
-</div>
-</div>
 </template>
-
-
 
 <script>
 import TIMETABLE_JSON from '../../../data/TIMETABLE_JSON.json';
-import TheFooter from '../../layout/TheFooter.vue';
-import Trening from '../trening/Trening.vue';
+import Training from '../training/Training.vue';
 export default {
     data() {
         return {
@@ -29,9 +22,14 @@ export default {
         trainings: Array
     },
     components: {
-        Trening,
-        TheFooter
+        Training
     }
 }
 </script>
 
+<style scoped>
+.row .col {
+    padding: 0px;
+}
+
+ </style>

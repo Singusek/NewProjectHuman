@@ -1,6 +1,5 @@
 <template>
 <div>
-  <the-header></the-header>
   <div>
     <player 
     v-for="player in PLAYERS_JSON" 
@@ -10,7 +9,6 @@
     :cadre="player.cadre"
     :achievments="player.achievments" />
   </div>
-  <the-footer></the-footer>
 </div>
 </template>
 

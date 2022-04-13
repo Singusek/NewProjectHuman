@@ -1,6 +1,5 @@
 <template>
     <div>
-        <the-header></the-header>
         <div class="row">
             <div class="col s12">
                 <div class="content-info">
@@ -21,7 +20,6 @@
                 </contact-card>
             </div>
         </div>
-        <the-footer></the-footer>
     </div>
 </template>
 
