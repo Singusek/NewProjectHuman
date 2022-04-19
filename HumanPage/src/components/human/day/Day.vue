@@ -1,8 +1,10 @@
 <template>
-    <div class="row">
-      <div class="col s12 m12 l2 xl2 day">
+    <div class="z-depth-2">
+      <div class="day orange lighten-5">
           <p>{{ day }}</p>
       </div>
+      <trainings 
+      :trainingsParam="trainings"/>
     </div>
 </template>
 
@@ -10,7 +12,8 @@
 import Trainings from '../trainings/Trainings.vue';
 export default {
     props: {
-        day: String
+        day: String,
+        trainings: Array
     },
     components: {
         Trainings
@@ -20,12 +23,7 @@ export default {
 
 <style scoped>
 .day {
-    height: 80px;
-    border: 1px solid black;
-    text-align: center;
+    height: 60px;
+    border: 1px solid rgba(0, 0, 0, 0.425);
 }
-.row:after {
-    display: none;
-}
-
 </style>
