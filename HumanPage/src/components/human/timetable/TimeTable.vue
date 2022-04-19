@@ -1,8 +1,8 @@
 <template>
     <div class="row">
-    <div 
-    style="height: 600px;" 
+    <div  
     class="container">
+    <h2 class="center-align">GRAFIK</h2>
         <day
         class="days 
         col s12 m12 l2 xl2 
@@ -34,11 +34,8 @@ export default {
 
 <style scoped>
 .days {
-    margin-bottom: 10px;
-    margin-top: 80px;
+    margin-top: 20px;
+    margin-bottom: 20px;
 }
-.row .col {
-    padding: 0px;
-    padding-right: 20px;
-}
+
 </style>

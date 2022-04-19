@@ -1,9 +1,10 @@
 <template>
-    <div class="z-depth-2">
-      <div class="day orange lighten-5">
+    <div>
+      <div class="day orange lighten-3">
           <p>{{ day }}</p>
       </div>
       <trainings 
+      class="trainings"
       :trainingsParam="trainings"/>
     </div>
 </template>
@@ -23,7 +24,26 @@ export default {
 
 <style scoped>
 .day {
-    height: 60px;
-    border: 1px solid rgba(0, 0, 0, 0.425);
+    height: 70px;
+    border: 1px solid rgba(0, 0, 0, 0.979);
+    font-weight: 700;
+    border-bottom: 0px;
+    box-shadow: 0 0 20px rgba(115,115,115,0.75);
+}
+.trainings {
+    border: 1px solid black;
+    box-shadow: 0 10px 15px rgba(115,115,115,0.75);
+}
+p {
+    margin-top: 22px;
+}
+@media screen and (max-width: 600px) {
+    .margin {
+        font-size: 20px;
+    }
+    .day {
+        font-size: 18px;
+        color: rgb(0, 0, 0);
+    }
 }
 </style>
