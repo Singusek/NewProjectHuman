@@ -3,14 +3,8 @@
     <div  
     class="container">
     <h2 v-if="show" class="center-align">GRAFIK</h2>
-    <transition-group 
-    appear
-    appear-From-Class="animate__backInDown"
-    appear-Active-Class="animate__backInDown"
-    enter-active-class="animate__backInDown"
-    name="animation">
         <day
-        class=" animate__animated animate__backInDown
+        class=" animate__animated animate__fadeInDown
         days 
         col s12 m12 l2 xl2 
         center-align"
@@ -20,7 +14,6 @@
         :key="object" 
         :day="object.day"
         :trainings="object.trainings"/>
-    </transition-group>
     </div>
 </div>
 </template>
