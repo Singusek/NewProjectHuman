@@ -25,6 +25,5 @@ export default {
     .training {
         padding-top: 4px;
     }
-
 }
 </style>
