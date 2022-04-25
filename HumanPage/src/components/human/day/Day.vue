@@ -19,7 +19,6 @@ export default {
     components: {
         Trainings
     },
-    
 }
 </script>
 
@@ -38,6 +37,7 @@ export default {
 p {
     margin-top: 22px;
 } 
+
 @media screen and (max-width: 600px) {
     .margin {
         font-size: 20px;
@@ -48,3 +48,4 @@ p {
     }
 }
 </style>
+

@@ -3,9 +3,13 @@
     <div  
     class="container">
     <h2 v-if="show" class="center-align">GRAFIK</h2>
+    <transition-group 
+        name="animation" 
+        appear
+        @before-enter="beforeEnter"
+        @enter="enter"> 
         <day
-        class=" animate__animated animate__fadeInDown
-        days 
+        class="days 
         col s12 m12 l2 xl2 
         center-align"
         v-show="show"
@@ -14,15 +18,17 @@
         :key="object" 
         :day="object.day"
         :trainings="object.trainings"/>
+    </transition-group>
     </div>
 </div>
 </template>
 
 <script>
 import 'animate.css';
+import gsap from 'gsap';
 import TIMETABLE_JSON from '../../../data/TIMETABLE_JSON.json';
-import Day from '../day/Day.vue';
 import Trainings from '../trainings/Trainings.vue';
+import Day from '../day/Day.vue';
 export default {
     data() {
         return {
@@ -34,7 +40,22 @@ export default {
         Day,
         Trainings 
     },
-   
+    methods: {
+        beforeEnter(el) {
+            el.style.opacity = 0;
+            // el.style.transform =  'translateY(100px)'
+        },
+
+        enter(el, done) {
+            gsap.to(el, {
+                opacity: 1,
+                y: 0,
+                duration: 0.8,
+                onComplete: done,
+                delay: el.dataset.index * 0.3
+            })
+        },
+    },
 }
 </script>
 
@@ -43,5 +64,4 @@ export default {
     margin-top: 20px;
     margin-bottom: 20px;
 }
-@import "https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css";
 </style>
