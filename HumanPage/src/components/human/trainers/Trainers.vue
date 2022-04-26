@@ -8,11 +8,11 @@
         <h5 class="trainer-text center-align">TRENERZY</h5>
         <div>
             <transition-group
-            name="animation"
             appear
             @before-enter="beforeEnter"
             @enter="enter">
          <trainer 
+         class="animation"
          v-for="(trainer, index) in TRAINERS_JSON" 
          :data-index="index"
          :key="trainer.id" :id="trainer.id" 
@@ -48,26 +48,63 @@ export default {
     },
     methods: {
         beforeEnter(el) {
+            //  gsap.to(el, {
+            //     ScrollTrigger: 1
+            // })
             el.style.opacity = 0;
             el.style.transform = el.dataset.index  % 2 == 0 ? 'translateX(-400px)' : 'translateX(400px)';
-
+            console.log("ScrollTrigger", ScrollTrigger)
+            // el.ScrollTrigger = el.dataset.index * ".animation"
             // ScrollTrigger.create({
             //     trigger: " animation"
             // })
             // el.style.transform =  'translateX(-150px)' && el.dataset.index  % 2 == 0;
         },
         enter(el, done) {
+
+            // ScrollTrigger.create({
+            //     trigger: ".animation",
+            //     opacity: 1,
+            //     x: 0,
+            //     duration: 2,
+            //     onComplete: done,
+            // })
+
             gsap.to(el, {
-                scrollTrigger: el,
+                // ScrollTrigger: el.dataset.index * "#animation",
+                // scrollTrigger: ".animation",
                 opacity: 1,
                 x: 0,
-                // x: el.dataset.index  % 2 == 0 ? 0 : 0,
-                // x: 0 && el.dataset.index  % 2 == 0,
-                duration: 1.3,
+                duration: 2,
                 onComplete: done,
-                
-            }) 
-        },
+                ScrollTrigger: {
+                    trigger: ".container",
+                    start: "top top"
+                }
+                // ScrollTrigger.getById()
+            })  
+        }
+            // gsap.timeline({
+            //     scrollTrigger: {
+            //         trigger: ".container",
+            //         start: "center bottom",
+            //          end: "center top",
+            //     }
+            // });
+            // gsap.to(".b", {
+            //     x: 400,
+            //     rotation: 360,
+            //     scrollTrigger: {
+            //         trigger: ".b",
+            //         start: "top center",
+            //         end: "top 100px",
+            //         scrub: true,
+            //         markers: true,
+            //         id: "scrub"
+            //     }
+            //     });
+
+    
     },
     props: ['text']
 }
