@@ -1,26 +1,25 @@
 <template>
     <div class="row">
-    <div  
-    class="container">
-    <h2 v-if="show" class="center-align">GRAFIK</h2>
-    <transition-group 
-        name="animation" 
-        appear
-        @before-enter="beforeEnter"
-        @enter="enter"> 
+    <div class="container">
+        <h2 class="center-align">GRAFIK</h2>
+        <transition-group 
+            name="animation" 
+            appear
+            @before-enter="beforeEnter"
+            @enter="enter"> 
         <day
-        class="days 
-        col s12 m12 l2 xl2 
-        center-align"
-        v-show="show"
-        v-for="(object, index) in TIMETABLE_JSON" 
-        :data-index="index"
-        :key="object" 
-        :day="object.day"
-        :trainings="object.trainings"/>
-    </transition-group>
+            class="days 
+            col s12 m12 l2 xl2 
+            center-align"
+            v-show="show"
+            v-for="(object, index) in TIMETABLE_JSON" 
+            :data-index="index"
+            :key="object" 
+            :day="object.day"
+            :trainings="object.trainings"/>
+        </transition-group>
     </div>
-</div>
+    </div>
 </template>
 
 <script>
@@ -43,7 +42,6 @@ export default {
     methods: {
         beforeEnter(el) {
             el.style.opacity = 0;
-            // el.style.transform =  'translateY(100px)'
         },
 
         enter(el, done) {
@@ -53,7 +51,7 @@ export default {
                 duration: 0.8,
                 onComplete: done,
                 delay: el.dataset.index * 0.3
-            })
+            });
         },
     },
 }
@@ -61,7 +59,9 @@ export default {
 
 <style scoped>
 .days {
-    margin-top: 20px;
-    margin-bottom: 20px;
+    margin-top: 20px;  
+}
+.container {
+    height: 55rem;
 }
 </style>
