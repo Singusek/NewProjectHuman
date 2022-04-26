@@ -40,10 +40,20 @@
 <style scoped>
 .page-footer {
     background-color: rgb(41, 40, 40);
+    /* max-height: 400px; */
 }
 .icons {
     
   flex-flow: column;
 }
+body {
+    display: flex;
+    min-height: 100vh;
+    flex-direction: column;
+  }
+
+  main {
+    flex: 1 0 auto;
+  }
 
 </style>

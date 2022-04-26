@@ -1,6 +1,5 @@
 <template>
     <div>
-        <the-header></the-header>
         <div>
             <div class="container">
                 <div class="oww">
@@ -160,8 +159,6 @@
                 </div>
             </div>
         </div>
-        <the-footer></the-footer>
-        
     </div>
 </template>
 

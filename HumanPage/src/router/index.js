@@ -3,10 +3,10 @@ import { createRouter, createWebHistory } from 'vue-router';
 import ContactPage from '../pages/ContactPage.vue';
 import MainPage from '../pages/MainPage.vue';
 import PriceList from '../pages/PriceList.vue';
-import TimeTables from '../components/human/timetable/TimeTable.vue';
 import Players from '../components/human/players/Players.vue';
 import NotFound from '../pages/NotFound.vue';
 import Trainers from '../components/human/trainers/Trainers.vue';
+import TimeTable from '../components/human/timetable/TimeTable.vue';
 
 const router = createRouter({
     history: createWebHistory(),
@@ -15,10 +15,10 @@ const router = createRouter({
         { path: '/main', component: MainPage },
         { path: '/contact', component: ContactPage },
         { path: '/price-list', component: PriceList },
-        { path: '/timetable', component: TimeTables },
         { path: '/players', component: Players },
         { path: '/about-us', component: Trainers },
-        { path: '/:notFound(.*)', component: NotFound }
+        { path: '/:notFound(.*)', component: NotFound },
+        { path: '/timetable', component: TimeTable }
     ]
 });
 
