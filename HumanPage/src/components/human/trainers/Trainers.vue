@@ -12,7 +12,7 @@
             @before-enter="beforeEnter"
             @enter="enter"> -->
          <trainer 
-         v-scrollanimation
+         v-animate-onscroll="{down: index  % 2 == 0 ? 'animate__animated animate__fadeInLeft' : 'animate__animated animate__fadeInRight'}"
          v-for="(trainer, index) in TRAINERS_JSON" 
          :data-index="index"
          :key="trainer.id" :id="trainer.id" 
@@ -46,27 +46,32 @@ export default {
         Trainer,
         Achievment
     },
-    // methods: {
-    //     beforeEnter(el) {
-    //         el.style.opacity = 0;
-    //         el.style.transform = el.dataset.index  % 2 == 0 ? 'translateX(-400px)' : 'translateX(400px)';
-    //         // console.log("ScrollTrigger", ScrollTrigger)
-    //     },
-    //     enter(el, done) {
-    //           gsap.to(el, {
-    //             // scrollTrigger: {
-	// 			//     trigger: el,
-    //             //     markers: true
-	// 		    // },
-    //             opacity: 1,
-    //             x: 0,
-    //             duration: 2,
-    //             onComplete: done,
-    //             delay: el.dataset.index * 0.4
-    //         });
-    //             // console.log("ScrollTrigger", ScrollTrigger)
-    //     }
-    // },
+    methods: {
+        // animationEnter(el) {
+        //     el.dataset.index  % 2 == 0 ? 'animate__animated animate__backInLeft' : 'animate__animated animate__backInRight';
+        // },
+        // beforeEnter(el) {
+        //     el.style.opacity = 0;
+        //     el.style.transform = el.dataset.index  % 2 == 0 ? 'translateX(-400px)' : 'translateX(400px)';
+        //     // console.log("ScrollTrigger", ScrollTrigger)
+        // },
+        // enter(el, done) {
+        //       gsap.to(el, {
+        //         // scrollTrigger: {
+		// 		//     trigger: el,
+        //         //     markers: true
+		// 	    // },
+        //         opacity: 1,
+        //         x: 0,
+        //         duration: 2,
+        //         onComplete: done,
+        //         delay: el.dataset.index * 0.4
+        //     });
+        //         // console.log("ScrollTrigger", ScrollTrigger)
+        // }
+
+
+    },
     props: ['text']
 }
 </script>
@@ -85,13 +90,13 @@ export default {
     margin-bottom: 40px;
     margin-top: 100px;
 }
- .before-enter {
-    opacity: 0;
-    transform: scale(.5) rotateZ(-25deg);
-    transition: all 1s ease-out;
-  }
- .enter {
-    opacity: 1;
-    transform: scale(1) rotateZ(0deg);
-  }
+//  .before-enter {
+//     opacity: 0;
+//     transform: scale(.5) rotateZ(-25deg);
+//     transition: all 1s ease-out;
+//   }
+//  .enter {
+//     opacity: 1;
+//     transform: scale(1) rotateZ(0deg);
+//   }
 </style>

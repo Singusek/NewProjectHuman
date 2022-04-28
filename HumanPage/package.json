@@ -8,6 +8,7 @@
     "preview": "vite preview --port 5050"
   },
   "dependencies": {
+    "animate.css": "^4.1.1",
     "axios": "^0.26.1",
     "gsap": "^3.10.4",
     "materialize-css": "^1.0.0-rc.2",
@@ -15,7 +16,8 @@
     "vue": "^3.2.31",
     "vue-animate-onscroll": "^1.0.8",
     "vue-animate-scroll": "^0.1.5",
-    "vue-router": "^4.0.12"
+    "vue-router": "^4.0.12",
+    "vue3-animate-onscroll": "^1.0.6"
   },
   "devDependencies": {
     "@vitejs/plugin-vue": "^2.2.2",
