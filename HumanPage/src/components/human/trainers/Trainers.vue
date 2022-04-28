@@ -7,19 +7,19 @@
         </div>
         <h5 class="trainer-text center-align">TRENERZY</h5>
         <div>
-            <transition-group
+            <!-- <transition-group
             appear
             @before-enter="beforeEnter"
-            @enter="enter">
+            @enter="enter"> -->
          <trainer 
-         class="animation"
+         v-scrollanimation
          v-for="(trainer, index) in TRAINERS_JSON" 
          :data-index="index"
          :key="trainer.id" :id="trainer.id" 
          :name="trainer.name" 
          :info="trainer.info" 
          :achievments="trainer.achievments"/>
-            </transition-group>
+            <!-- </transition-group> -->
         </div>
         <the-footer></the-footer>
     </div>
@@ -46,94 +46,32 @@ export default {
         Trainer,
         Achievment
     },
-    methods: {
-        beforeEnter(el) {
-            //  gsap.to(el, {
-            //     ScrollTrigger: 1
-            // })
-            el.style.opacity = 0;
-            el.style.transform = el.dataset.index  % 2 == 0 ? 'translateX(-400px)' : 'translateX(400px)';
-            console.log("ScrollTrigger", ScrollTrigger)
-            // el.ScrollTrigger = el.dataset.index * ".animation"
-            // ScrollTrigger.create({
-            //     trigger: " animation"
-            // })
-            // el.style.transform =  'translateX(-150px)' && el.dataset.index  % 2 == 0;
-        },
-        enter(el, done) {
-
-            // ScrollTrigger.create({
-            //     trigger: ".animation",
-            //     opacity: 1,
-            //     x: 0,
-            //     duration: 2,
-            //     onComplete: done,
-            // })
-
-            gsap.to(el, {
-                // ScrollTrigger: el.dataset.index * "#animation",
-                // scrollTrigger: ".animation",
-                // scrollTrigger: {
-				//     trigger: el,
-                //     markers: true
-			    // },
-                opacity: 1,
-                x: 0,
-                duration: 2,
-                onComplete: done,
-                // scrollTrigger: el
-                // ScrollTrigger.getById()
-            });
-        }
-
-            // Vue.directive('clipscroll', {
-            // inserted: function (el, binding) {
-            //     let f = function (evt) {
-            //     var hasRun = false
-            //     if (!hasRun && window.scrollY > binding.value.start) {
-            //         hasRun = true
-            //         TweenMax.to(el, 2, {
-            //         morphSVG: binding.value.toPath,
-            //         ease: Sine.easeIn
-            //         })
-            //     }
-            //     if (window.scrollY > binding.value.end) {
-            //         window.removeEventListener('scroll', f)
-            //     }
-            //     }
-            //     window.addEventListener('scroll', f)
-            // }
-            // })
-                //  window.addEventListener('scroll')
-
-        
-            // gsap.timeline({
-            //     scrollTrigger: {
-            //         trigger: ".container",
-            //         start: "center bottom",
-            //          end: "center top",
-            //     }
-            // });
-            // gsap.to(".b", {
-            //     x: 400,
-            //     rotation: 360,
-            //     scrollTrigger: {
-            //         trigger: ".b",
-            //         start: "top center",
-            //         end: "top 100px",
-            //         scrub: true,
-            //         markers: true,
-            //         id: "scrub"
-            //     }
-            //     });
-
-    
-    },
+    // methods: {
+    //     beforeEnter(el) {
+    //         el.style.opacity = 0;
+    //         el.style.transform = el.dataset.index  % 2 == 0 ? 'translateX(-400px)' : 'translateX(400px)';
+    //         // console.log("ScrollTrigger", ScrollTrigger)
+    //     },
+    //     enter(el, done) {
+    //           gsap.to(el, {
+    //             // scrollTrigger: {
+	// 			//     trigger: el,
+    //             //     markers: true
+	// 		    // },
+    //             opacity: 1,
+    //             x: 0,
+    //             duration: 2,
+    //             onComplete: done,
+    //             delay: el.dataset.index * 0.4
+    //         });
+    //             // console.log("ScrollTrigger", ScrollTrigger)
+    //     }
+    // },
     props: ['text']
 }
 </script>
 
-<style scoped>
+<style lang="scss" scoped>
 .container {
     margin-top: 50px;
     margin-bottom: 70px;  
@@ -147,4 +85,13 @@ export default {
     margin-bottom: 40px;
     margin-top: 100px;
 }
+ .before-enter {
+    opacity: 0;
+    transform: scale(.5) rotateZ(-25deg);
+    transition: all 1s ease-out;
+  }
+ .enter {
+    opacity: 1;
+    transform: scale(1) rotateZ(0deg);
+  }
 </style>
