@@ -1,11 +1,11 @@
 <template>
 <div class="container">
-    <div>
-        <h4 class="center-align title">O NAS</h4>
+    <div class="row tittle">
+        <h4 class="center-align col s12 m12 l12 xl12">O NAS</h4>
         <div class="container">{{ ABOUTUS_JSON.text }}</div>
     </div>
     <you-tube 
-        class="container"
+        class="container youtube"
         src="https://www.youtube.com/watch?v=G3nYrw9MMGw&ab_channel=NiekompatybilnyX" 
         @ready="onReady"
         ref="youtube" />
@@ -26,10 +26,13 @@ export default {
 </script>
 
 <style scoped>
-    .container {
+    .tittle {
         margin-top: 50px;
         margin-bottom: 70px;  
         text-align: justify;
         font-size: 18px;                             
+    }
+    .youtube {
+        margin-bottom: 70px;
     }
 </style>
