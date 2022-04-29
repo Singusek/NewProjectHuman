@@ -7,7 +7,9 @@
         <h5 class="trainer-text center-align">TRENERZY</h5>
         <div>
          <trainer 
-         v-for="trainer in TRAINERS_JSON" 
+         v-animate-onscroll="{down:  index  % 2 == 0 ? 'animate__animated animate__fadeInLeft animate__slower 1.5s'  : 'animate__animated animate__fadeInRight animate__slower 1.5s'}"
+         v-for="(trainer, index) in TRAINERS_JSON" 
+         :data-index="index"
          :key="trainer.id" :id="trainer.id" 
          :name="trainer.name" 
          :info="trainer.info" 
@@ -37,7 +39,7 @@ export default {
 }
 </script>
 
-<style scoped>
+<style lang="scss" scoped>
 .container {
     margin-top: 50px;
     margin-bottom: 70px;  
