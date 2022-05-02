@@ -2,7 +2,9 @@
 <div>
   <div>
     <player 
-    v-for="player in PLAYERS_JSON" 
+    v-animate-onscroll="{down:  index  % 2 == 0 ? 'animate__animated animate__fadeInLeft animate__slower 1.5s'  : 'animate__animated animate__fadeInRight animate__slower 1.5s'}"
+    v-for="(player, index) in PLAYERS_JSON" 
+    :data-index="index"
     :key="player.id"
     :id="player.id"
     :name="player.name"
