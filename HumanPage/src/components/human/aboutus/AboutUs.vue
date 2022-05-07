@@ -21,7 +21,7 @@ export default {
             ABOUTUS_JSON: ABOUTUS_JSON
         }
     },
-    props: ['text']
+    props: ['text'],
 }
 </script>
 
