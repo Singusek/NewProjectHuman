@@ -62,6 +62,9 @@ export default {
         //     }
         // });
 
+        // const API_KEY = process.env.VUE_APP_API_KEY
+
+         const API_KEY = `${process.env.VUE_APP_API_KEY}`
 
         fetch('https://youtube.googleapis.com/youtube/v3/playlists?part=player&channelId=UCJrOtniJ0-NWz37R30urifQ&key=AIzaSyCm1-B66mC_hDqEzv4wAQ-ORER9WSoqGQU', {
             headers: { 'Content-type': 'application/json' },
@@ -69,7 +72,6 @@ export default {
             return result.json()
         }).then((data) => {
             console.log(data)
-            console.log(process.env.VUE_APP_API_KEY)
         });
 
     
