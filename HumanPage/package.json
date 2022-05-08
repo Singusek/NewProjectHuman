@@ -8,6 +8,7 @@
     "preview": "vite preview --port 5050"
   },
   "dependencies": {
+    "@vue/cli": "^5.0.4",
     "animate.css": "^4.1.1",
     "axios": "^0.26.1",
     "gsap": "^3.10.4",
@@ -16,9 +17,11 @@
     "vue": "^3.2.31",
     "vue-animate-onscroll": "^1.0.8",
     "vue-animate-scroll": "^0.1.5",
+    "vue-axios": "^3.4.1",
     "vue-router": "^4.0.12",
     "vue3-animate-onscroll": "^1.0.6",
-    "vue3-youtube": "^0.1.9"
+    "vue3-youtube": "^0.1.9",
+    "vuex": "^4.0.2"
   },
   "devDependencies": {
     "@vitejs/plugin-vue": "^2.2.2",

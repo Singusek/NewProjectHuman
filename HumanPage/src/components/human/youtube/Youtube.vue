@@ -1,5 +1,7 @@
 <template>
     <div>
+        <div v-for="items in data" :key="items">{{ data.data.items[0].player.embedHtml }}</div>
+        <div v-for="items in data" :key="items" :player="items.player">{{ embedHtml }}</div>
         <!-- <div v-for="data in result.json" :key="data" :items="data.items">{{ data.items }}</div> -->
         <!-- <div v-for="video in videos" :key="video" :video="video.videos">{{ video.videos }}</div> -->
         <!-- <div v-for="video in data.json" :key="video">{{ data.json }}</div> -->
@@ -8,43 +10,26 @@
 </template>
 
 <script>
-import { ref } from 'vue';
-
 export default {
-    setup() { 
-        
-         
-        //  const state = ref({});
+        data() {
+            return {
+                player: null,
+                items: Array,
+                data: null,
+                embedHtml: String
+            }
+        },
+        mounted() {
+            axios
+            .get('https://youtube.googleapis.com/youtube/v3/playlists?part=player&channelId=UCJrOtniJ0-NWz37R30urifQ&key=AIzaSyCm1-B66mC_hDqEzv4wAQ-ORER9WSoqGQU')
+            .then(response => (this.data = response))
+            .then(response => (this.items = response))
+            .then(data => console.log(data))
+        },
+        filters: {
 
-        // fetch('https://youtube.googleapis.com/youtube/v3/search?channelId=UC58utp9cl1w6S8mmbHrRZuQ&key=AIzaSyCm1-B66mC_hDqEzv4wAQ-ORER9WSoqGQU'), {
-        //     headers: { 'Content-type': 'application/json' }
-        //     .then(response => response.json())
-        //     .then(data => state.value = data);
-
-        // return { state }
-        // props: {'videos', 'etag', 'items', 'kind', 'video'}
-        // const result = ref(null) 
-
-        // fetch('https://youtube.googleapis.com/youtube/v3/playlists?part=snippet%2CcontentDetails&channelId=UCu_ddLC4r2z4RZGBNCBg3SA&maxResults=25&key=AIzaSyCm1-B66mC_hDqEzv4wAQ-ORER9WSoqGQU') 
-        // .then(response => response.json()) 
-        // .then(data => result.value = data)
-        // .then(list => console.log(list));
-
-        // return { result } 
-
-        // const getYtVideo = () => {
-        // fetch('https://youtube.googleapis.com/youtube/v3/playlists?part=snippet%2CcontentDetails&channelId=UCu_ddLC4r2z4RZGBNCBg3SA&maxResults=25&key=AIzaSyCm1-B66mC_hDqEzv4wAQ-ORER9WSoqGQU', {
-        //     headers: { 'Content-type': 'application/json' },
-        // }).then(res=>res.json()).then((videos) => {
-        //     console.log({ videos })
-        // }).catch((error) => {
-        //     console.log('Looks like there was a problem: \n', error);
-        // });
-        // }
-
-        // getYtVideo()
-        // },
-
+        }
+    
         
         // fetch('https://youtube.googleapis.com/youtube/v3/search?part=snippet&channelId=UC58utp9cl1w6S8mmbHrRZuQ&key=AIzaSyCm1-B66mC_hDqEzv4wAQ-ORER9WSoqGQU', {
         //     headers: { 'Content-type': 'application/json' },
@@ -62,34 +47,15 @@ export default {
         //     }
         // });
 
-        // const API_KEY = process.env.VUE_APP_API_KEY
-
-         const API_KEY = `${process.env.VUE_APP_API_KEY}`
-
-        fetch('https://youtube.googleapis.com/youtube/v3/playlists?part=player&channelId=UCJrOtniJ0-NWz37R30urifQ&key=AIzaSyCm1-B66mC_hDqEzv4wAQ-ORER9WSoqGQU', {
-            headers: { 'Content-type': 'application/json' },
-        }).then((result) => {
-            return result.json()
-        }).then((data) => {
-            console.log(data)
-        });
-
-    
-
-        // <iframe width="853" height="480" src="${src}" frameborder="0" allowfullscreen></iframe>
-
-        //  fetch('https://youtube.googleapis.com/youtube/v3/search?channelId=UC58utp9cl1w6S8mmbHrRZuQ&key=AIzaSyCm1-B66mC_hDqEzv4wAQ-ORER9WSoqGQU', {
+        // fetch('https://youtube.googleapis.com/youtube/v3/playlists?part=player&channelId=UCJrOtniJ0-NWz37R30urifQ&key=AIzaSyCm1-B66mC_hDqEzv4wAQ-ORER9WSoqGQU', {
         //     headers: { 'Content-type': 'application/json' },
         // }).then((result) => {
         //     return result.json()
         // }).then((data) => {
         //     console.log(data)
+        //     // console.log(process.env.VUE_APP_API_KEY)
         // });
 
-
-       
-        // }
-    }
       
 }
 </script>

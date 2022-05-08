@@ -8,6 +8,8 @@ import TheHeader from '../src/components/layout/TheHeader.vue';
 import TheFooter from '../src/components/layout/TheFooter.vue';
 import VueAnimateOnScroll from 'vue3-animate-onscroll';
 import YouTube from 'vue3-youtube'
+import axios from 'axios'
+import VueAxios from 'vue-axios'
 
 const app = createApp(App)
 
@@ -20,5 +22,6 @@ app.component('YouTube', YouTube);
 
 app.use(router)
 app.use(VueAnimateOnScroll);
+app.use(VueAxios, axios)
 
 app.mount('#app')
