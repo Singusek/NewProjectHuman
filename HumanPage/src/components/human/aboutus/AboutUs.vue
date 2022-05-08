@@ -9,17 +9,22 @@
         src="https://www.youtube.com/watch?v=G3nYrw9MMGw&ab_channel=NiekompatybilnyX" 
         @ready="onReady"
         ref="youtube" />
+        
 </div>
 </template>
 
 <script>
 import ABOUTUS_JSON from '../../../data/ABOUTUS_JSON.json';
 
+
 export default {
      data() {
         return {
             ABOUTUS_JSON: ABOUTUS_JSON
         }
+    },
+    components: {
+        
     },
     props: ['text'],
 }

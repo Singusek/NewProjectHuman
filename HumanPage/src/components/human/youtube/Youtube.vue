@@ -1,7 +1,14 @@
 <template>
     <div>
-        <div v-for="items in data" :key="items">{{ data.data.items[0].player.embedHtml }}</div>
+        <div v-for="items in data" :key="items" >{{ data.data.items[0].player.embedHtml }}</div>
         <div v-for="items in data" :key="items" :player="items.player">{{ embedHtml }}</div>
+        
+        <!-- <div v-for="players in info" :key="players">
+            {{ players.embedHtml }}
+            <div>
+            <span v-html="rawHTML"></span>{{ player.embedHtml | playersvideo }}
+            </div>
+        </div> -->
         <!-- <div v-for="data in result.json" :key="data" :items="data.items">{{ data.items }}</div> -->
         <!-- <div v-for="video in videos" :key="video" :video="video.videos">{{ video.videos }}</div> -->
         <!-- <div v-for="video in data.json" :key="video">{{ data.json }}</div> -->
@@ -16,7 +23,7 @@ export default {
                 player: null,
                 items: Array,
                 data: null,
-                embedHtml: String
+                embedHtml: null // undifaied
             }
         },
         mounted() {
@@ -26,6 +33,11 @@ export default {
             .then(response => (this.items = response))
             .then(data => console.log(data))
         },
+        // mounted() {
+        //     axios
+        //     .get('https://youtube.googleapis.com/youtube/v3/playlists?part=player&channelId=UCJrOtniJ0-NWz37R30urifQ&key=AIzaSyCm1-B66mC_hDqEzv4wAQ-ORER9WSoqGQU')
+        //     .then(response => (this.info = response.data.bpi))
+        // },
         filters: {
 
         }
