@@ -1,7 +1,8 @@
 <template>
     <div>
-        <div v-for="items in data" :key="items" >{{ data.data.items[0].player.embedHtml }}</div>
-        <div v-for="items in data" :key="items" :player="items.player">{{ embedHtml }}</div>
+        <div><iframe v-for="items in data" :key="items" class="video" src="https://www.youtube.com/embed/videoseries?list={{ data.items[0].id }}"/></div>
+        <!-- <div v-for="items in data" :key="items" >{{ data.data.items[0].player.embedHtml }}</div>
+        <div v-for="items in data" :key="items" :player="items.player">{{ embedHtml }}</div> -->
         
         <!-- <div v-for="players in info" :key="players">
             {{ players.embedHtml }}
@@ -13,6 +14,11 @@
         <!-- <div v-for="video in videos" :key="video" :video="video.videos">{{ video.videos }}</div> -->
         <!-- <div v-for="video in data.json" :key="video">{{ data.json }}</div> -->
         <!-- <div class="youtube-component"></div> -->
+         <!-- <you-tube 
+         v-for="items in data" :key="items"
+        class="container youtube"
+        src="'https://www.youtube.com/embed/videoseries?list='${data.items[0].id}" 
+        ref="youtube" /> -->
     </div>
 </template>
 
@@ -23,12 +29,20 @@ export default {
                 player: null,
                 items: Array,
                 data: null,
-                embedHtml: null // undifaied
+                embedHtml: null, // undifaied
+                id: null
             }
         },
+        // mounted() {
+        //     axios
+        //     .get('https://youtube.googleapis.com/youtube/v3/playlists?part=player&channelId=UCJrOtniJ0-NWz37R30urifQ&key=AIzaSyCm1-B66mC_hDqEzv4wAQ-ORER9WSoqGQU')
+        //     .then(response => (this.data = response))
+        //     .then(response => (this.items = response))
+        //     .then(data => console.log(data))
+        // },
         mounted() {
             axios
-            .get('https://youtube.googleapis.com/youtube/v3/playlists?part=player&channelId=UCJrOtniJ0-NWz37R30urifQ&key=AIzaSyCm1-B66mC_hDqEzv4wAQ-ORER9WSoqGQU')
+            .get('https://youtube.googleapis.com/youtube/v3/playlists?part=snippet&channelId=UCRUKO34OGs6wfLGUcGlnU5g&key=AIzaSyCm1-B66mC_hDqEzv4wAQ-ORER9WSoqGQU')
             .then(response => (this.data = response))
             .then(response => (this.items = response))
             .then(data => console.log(data))
@@ -71,3 +85,4 @@ export default {
       
 }
 </script>
+
