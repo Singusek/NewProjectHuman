@@ -1,6 +1,8 @@
 <template>
     <div>
-        <div><iframe v-for="items in data" :key="items" class="video" src="https://www.youtube.com/embed/videoseries?list={{ data.items[0].id }}"/></div>
+        <iframe v-for="video in data" :key="video" :items="data.items" :id="items.id" src="https://www.youtube.com/embed/videoseries?list={{ data.items[1].id }}" />
+        <!-- <div><iframe v-for="items in data" :key="items" :id="items.id" class="video" src="https://www.youtube.com/embed/videoseries?list=${data.data.items[1].id}"/></div> -->
+        
         <!-- <div v-for="items in data" :key="items" >{{ data.data.items[0].player.embedHtml }}</div>
         <div v-for="items in data" :key="items" :player="items.player">{{ embedHtml }}</div> -->
         
@@ -26,12 +28,12 @@
 export default {
         data() {
             return {
-                player: null,
-                items: Array,
-                data: null,
-                embedHtml: null, // undifaied
-                id: null
+                data: data,
             }
+        },
+        props: {
+            items: Array,
+            id: String
         },
         // mounted() {
         //     axios
@@ -47,6 +49,11 @@ export default {
             .then(response => (this.items = response))
             .then(data => console.log(data))
         },
+        // methods: {
+        //     VideoElement() {
+        //         return <iframe v-for="id in items" src={`https://www.youtube.com/embed/videoseries?list=${data.data.items[1].id}`} />
+        //     }
+        // },
         // mounted() {
         //     axios
         //     .get('https://youtube.googleapis.com/youtube/v3/playlists?part=player&channelId=UCJrOtniJ0-NWz37R30urifQ&key=AIzaSyCm1-B66mC_hDqEzv4wAQ-ORER9WSoqGQU')
