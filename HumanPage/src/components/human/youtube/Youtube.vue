@@ -1,6 +1,8 @@
 <template>
     <div>
-        <iframe v-for="video in data" :key="video" :items="data.items" :id="items.id" src="https://www.youtube.com/embed/videoseries?list={{ data.items[1].id }}" />
+        <!-- <iframe v-for="video in data" :key="video" :items="data.items" :id="items.id" src="https://www.youtube.com/embed/videoseries?list={{ data.items[1].id }}" /> -->
+        <div v-for="items in data" :key="items" :id="items.id">{{ data.data.items[0].id  }}</div>
+        <div v-for="items in data" :key="items" :id="items.id"><iframe src="'https://www.youtube.com/embed/videoseries?list=${data.data.items[0].id}'"/></div>
         <!-- <div><iframe v-for="items in data" :key="items" :id="items.id" class="video" src="https://www.youtube.com/embed/videoseries?list=${data.data.items[1].id}"/></div> -->
         
         <!-- <div v-for="items in data" :key="items" >{{ data.data.items[0].player.embedHtml }}</div>
@@ -28,13 +30,17 @@
 export default {
         data() {
             return {
-                data: data,
+                player: null,
+                items: null,
+                data: null,
+                embedHtml: null, // undifaied
+                id: null
             }
         },
-        props: {
-            items: Array,
-            id: String
-        },
+        // props: {
+        //     items: Array,
+        //     id: String
+        // },
         // mounted() {
         //     axios
         //     .get('https://youtube.googleapis.com/youtube/v3/playlists?part=player&channelId=UCJrOtniJ0-NWz37R30urifQ&key=AIzaSyCm1-B66mC_hDqEzv4wAQ-ORER9WSoqGQU')
@@ -59,9 +65,6 @@ export default {
         //     .get('https://youtube.googleapis.com/youtube/v3/playlists?part=player&channelId=UCJrOtniJ0-NWz37R30urifQ&key=AIzaSyCm1-B66mC_hDqEzv4wAQ-ORER9WSoqGQU')
         //     .then(response => (this.info = response.data.bpi))
         // },
-        filters: {
-
-        }
     
         
         // fetch('https://youtube.googleapis.com/youtube/v3/search?part=snippet&channelId=UC58utp9cl1w6S8mmbHrRZuQ&key=AIzaSyCm1-B66mC_hDqEzv4wAQ-ORER9WSoqGQU', {
