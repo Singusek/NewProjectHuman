@@ -2,7 +2,8 @@
     <div>
         <!-- <iframe v-for="video in data" :key="video" :items="data.items" :id="items.id" src="https://www.youtube.com/embed/videoseries?list={{ data.items[1].id }}" /> -->
         <!-- <div v-for="items in data" :key="items" :id="items.id">{{ data.data.items[0].id  }}</div> -->
-        <div v-for="item in items" :key="item" :id="items.id">{{ items }}</div>
+        <div v-for="item in items" :key="item" :player="items.player" :embedHtml="player.embedHtml">{{ item[1] }}</div>
+        <!-- <div v-for="embedHtml in embedHtml" :key="embedHtml" >{{ embedHtml }}</div> -->
         <!-- <div v-for="id in id" :key="id" :id="items.id">{{ id  }}</div> -->
         <!-- <div v-for="items in data" :key="items" :id="items.id"><iframe src="https://www.youtube.com/embed/videoseries?list=`${data.data.items[0].id}`"/></div> -->
         <!-- <div><iframe v-for="items in data" :key="items" :id="items.id" class="video" src="https://www.youtube.com/embed/videoseries?list=${data.data.items[1].id}"/></div> -->
@@ -33,6 +34,9 @@ export default {
         data() {
             return {
                 items: [],
+                // id: String,
+                player: String,
+                // embedHtml: String
             }
         },
         // props: {
@@ -47,9 +51,16 @@ export default {
         //     .then(data => console.log(data))
         // },
         mounted() {
-            fetch('https://youtube.googleapis.com/youtube/v3/playlists?part=snippet&channelId=UCRUKO34OGs6wfLGUcGlnU5g&key=AIzaSyCm1-B66mC_hDqEzv4wAQ-ORER9WSoqGQU')
+            // fetch('https://youtube.googleapis.com/youtube/v3/playlists?part=snippet&channelId=UCRUKO34OGs6wfLGUcGlnU5g&key=AIzaSyCm1-B66mC_hDqEzv4wAQ-ORER9WSoqGQU')
+            // .then(res => res.json())
+            // .then(data => this.items = data)
+            // .catch(err => console.log(err.message))
+                //bozenka player
+            fetch('https://youtube.googleapis.com/youtube/v3/playlists?part=player&channelId=UCj89LC_NXjDqcacxHSswI5Q&maxResults=5&key=AIzaSyCm1-B66mC_hDqEzv4wAQ-ORER9WSoqGQU')
             .then(res => res.json())
             .then(data => this.items = data)
+            .then(data => this.player = data)
+            // .then(data => this.embedHtml = data)
             .catch(err => console.log(err.message))
             // axios
             // .get('https://youtube.googleapis.com/youtube/v3/playlists?part=snippet&channelId=UCRUKO34OGs6wfLGUcGlnU5g&key=AIzaSyCm1-B66mC_hDqEzv4wAQ-ORER9WSoqGQU')
