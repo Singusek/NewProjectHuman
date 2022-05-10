@@ -1,8 +1,10 @@
 <template>
     <div>
         <!-- <iframe v-for="video in data" :key="video" :items="data.items" :id="items.id" src="https://www.youtube.com/embed/videoseries?list={{ data.items[1].id }}" /> -->
-        <div v-for="items in data" :key="items" :id="items.id">{{ data.data.items[0].id  }}</div>
-        <div v-for="items in data" :key="items" :id="items.id"><iframe src="'https://www.youtube.com/embed/videoseries?list=${data.data.items[0].id}'"/></div>
+        <!-- <div v-for="items in data" :key="items" :id="items.id">{{ data.data.items[0].id  }}</div> -->
+        <div v-for="item in items" :key="item" :id="items.id">{{ items }}</div>
+        <!-- <div v-for="id in id" :key="id" :id="items.id">{{ id  }}</div> -->
+        <!-- <div v-for="items in data" :key="items" :id="items.id"><iframe src="https://www.youtube.com/embed/videoseries?list=`${data.data.items[0].id}`"/></div> -->
         <!-- <div><iframe v-for="items in data" :key="items" :id="items.id" class="video" src="https://www.youtube.com/embed/videoseries?list=${data.data.items[1].id}"/></div> -->
         
         <!-- <div v-for="items in data" :key="items" >{{ data.data.items[0].player.embedHtml }}</div>
@@ -30,11 +32,7 @@
 export default {
         data() {
             return {
-                player: null,
-                items: null,
-                data: null,
-                embedHtml: null, // undifaied
-                id: null
+                items: [],
             }
         },
         // props: {
@@ -49,11 +47,15 @@ export default {
         //     .then(data => console.log(data))
         // },
         mounted() {
-            axios
-            .get('https://youtube.googleapis.com/youtube/v3/playlists?part=snippet&channelId=UCRUKO34OGs6wfLGUcGlnU5g&key=AIzaSyCm1-B66mC_hDqEzv4wAQ-ORER9WSoqGQU')
-            .then(response => (this.data = response))
-            .then(response => (this.items = response))
-            .then(data => console.log(data))
+            fetch('https://youtube.googleapis.com/youtube/v3/playlists?part=snippet&channelId=UCRUKO34OGs6wfLGUcGlnU5g&key=AIzaSyCm1-B66mC_hDqEzv4wAQ-ORER9WSoqGQU')
+            .then(res => res.json())
+            .then(data => this.items = data)
+            .catch(err => console.log(err.message))
+            // axios
+            // .get('https://youtube.googleapis.com/youtube/v3/playlists?part=snippet&channelId=UCRUKO34OGs6wfLGUcGlnU5g&key=AIzaSyCm1-B66mC_hDqEzv4wAQ-ORER9WSoqGQU')
+            // .then(response => (this.data = response))
+            // .then(response => (this.items = response))
+            // .then(data => console.log(data))
         },
         // methods: {
         //     VideoElement() {
