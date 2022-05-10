@@ -1,41 +1,35 @@
 <template>
     <div>
-        <div 
+        <video 
         v-for="item in data.items" 
-        :key="item">
-        {{ item.player.embedHtml
-        .split(' ')[3]
-        .split('="')[1]
-        .slice(0, -1) }}
-        </div>
-        
+        :key="item"
+        :player="items.player"
+        :embedHtml="player.embedHtml"
+        />
     </div>
 </template>
 
 <script>
-import Videos from '../videos/Videos.vue'
+import Video from '../video/Video.vue'
 export default {
-        data() {
+    data() {
             return {
                 data: [],
             }
         },
-        mounted() {
+    components: {
+        Video
+    },
+
+    // props: {
+    //     embedHtml: String
+    // },
+    mounted() {
             fetch('https://youtube.googleapis.com/youtube/v3/playlists?part=player&channelId=UCj89LC_NXjDqcacxHSswI5Q&maxResults=5&key=AIzaSyCm1-B66mC_hDqEzv4wAQ-ORER9WSoqGQU')
             .then(res => res.json())
             .then(data => this.data = data)
             .then(data => console.log(data))
             .catch(err => console.log(err.message))
         },
-        methods: {
-            ApiKey() {
-                return console.log(process.env.VUE_APP_API)
-            }
-        },
-        components: {
-             Videos
-        },
-        
 }
 </script>
-

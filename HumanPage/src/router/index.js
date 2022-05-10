@@ -9,6 +9,7 @@ import Trainers from '../components/human/trainers/Trainers.vue';
 import TimeTable from '../components/human/timetable/TimeTable.vue';
 import AboutUs from '../components/human/aboutus/AboutUs.vue';
 import Youtube from '../components/human/youtube/Youtube.vue';
+import Videos from '../components/human/videos/Videos.vue';
 
 const router = createRouter({
     history: createWebHistory(),
@@ -23,6 +24,7 @@ const router = createRouter({
         { path: '/:notFound(.*)', component: NotFound },
         { path: '/timetable', component: TimeTable },
         { path: '/youtube', component: Youtube },
+        { path: '/videos', component: Videos },
     ]
 });
 
