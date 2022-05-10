@@ -5,6 +5,7 @@
         <div class="container">{{ ABOUTUS_JSON.text }}</div>
     </div>
     <!-- <youtube v-for="item in items" :key="item" :player="items.player" :embedHtml="player.embedHtml"/> -->
+    <!-- <youtube v-for="items in data" :key="items" /> -->
     <you-tube 
         class="container youtube"
         src="https://www.youtube.com/watch?v=G3nYrw9MMGw&ab_channel=NiekompatybilnyX" 
@@ -16,7 +17,8 @@
 
 <script>
 import ABOUTUS_JSON from '../../../data/ABOUTUS_JSON.json';
-// import Youtube from '../youtube/Youtube.vue'
+import Youtube from '../youtube/Youtube.vue';
+
 
 
 export default {
@@ -27,6 +29,7 @@ export default {
     },
     components: {
         // Youtube
+        
     },
     props: ['text'],
     // mounted() {
@@ -38,6 +41,24 @@ export default {
     //         .catch(err => console.log(err.message))
     //         // axios
     // },
+    // mounted() {
+    //         // fetch('https://youtube.googleapis.com/youtube/v3/playlists?part=snippet&channelId=UCRUKO34OGs6wfLGUcGlnU5g&key=AIzaSyCm1-B66mC_hDqEzv4wAQ-ORER9WSoqGQU')
+    //         // .then(res => res.json())
+    //         // .then(data => this.items = data)
+    //         // .catch(err => console.log(err.message))
+    //             //bozenka player
+    //         fetch('https://youtube.googleapis.com/youtube/v3/playlists?part=player&channelId=UCj89LC_NXjDqcacxHSswI5Q&maxResults=5&key=AIzaSyCm1-B66mC_hDqEzv4wAQ-ORER9WSoqGQU')
+    //         .then(res => res.json())
+    //         .then(data => this.data = data)
+    //         .then(data => console.log(data))
+    //         // .then(data => this.embedHtml = data)
+    //         .catch(err => console.log(err.message))
+    //         // axios
+    //         // .get('https://youtube.googleapis.com/youtube/v3/playlists?part=snippet&channelId=UCRUKO34OGs6wfLGUcGlnU5g&key=AIzaSyCm1-B66mC_hDqEzv4wAQ-ORER9WSoqGQU')
+    //         // .then(response => (this.data = response))
+    //         // .then(response => (this.items = response))
+    //         // .then(data => console.log(data))
+    //     },
 }
 </script>
 
