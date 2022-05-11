@@ -6,8 +6,6 @@
             v-for="item in data.items" 
             :key="item"
             :embedHtml="item.player.embedHtml"/>
-            <!-- <div v-for="item in data.items" 
-            :key="item">{{ item.player }}</div> -->
     </div>
 </div>
 </template>
@@ -23,10 +21,6 @@ export default {
     components: {
         Film
     },
-
-    // props: {
-    //     embedHtml: String
-    // },
     mounted() {
             fetch('https://youtube.googleapis.com/youtube/v3/playlists?part=player&channelId=UCj89LC_NXjDqcacxHSswI5Q&maxResults=5&key=AIzaSyCm1-B66mC_hDqEzv4wAQ-ORER9WSoqGQU')
             .then(res => res.json())
@@ -38,7 +32,5 @@ export default {
 </script>
 
 <style scoped>
-    .videos {
-        margin-left: 20px;
-    }
+   
 </style>

@@ -8,6 +8,7 @@
         <li><a href="http://localhost:3000/timetable">Grafik</a></li>
         <li><a href="http://localhost:3000/trainers">Trenerzy</a></li>
         <li><a href="http://localhost:3000/players">Zawodnicy</a></li>
+        <li><a href="http://localhost:3000/videos">Filmy</a></li>
         <li><a href="http://localhost:3000/contact">Kontakt</a></li>
       </ul>
     </div>
