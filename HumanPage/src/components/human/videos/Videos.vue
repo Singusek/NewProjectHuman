@@ -1,16 +1,19 @@
 <template>
-    <div>
-        <video 
-        v-for="item in data.items" 
-        :key="item"
-        :player="items.player"
-        :embedHtml="player.embedHtml"
-        />
+<div class="container">
+    <div class="row">
+        <film 
+            class="videos col s12 m12 l2 xl2"
+            v-for="item in data.items" 
+            :key="item"
+            :embedHtml="item.player.embedHtml"/>
+            <!-- <div v-for="item in data.items" 
+            :key="item">{{ item.player }}</div> -->
     </div>
+</div>
 </template>
 
 <script>
-import Video from '../video/Video.vue'
+import Film from '../film/Film.vue'
 export default {
     data() {
             return {
@@ -18,7 +21,7 @@ export default {
             }
         },
     components: {
-        Video
+        Film
     },
 
     // props: {
@@ -33,3 +36,9 @@ export default {
         },
 }
 </script>
+
+<style scoped>
+    .videos {
+        margin-left: 20px;
+    }
+</style>

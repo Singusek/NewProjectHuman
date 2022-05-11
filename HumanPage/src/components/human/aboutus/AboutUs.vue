@@ -8,9 +8,10 @@
     <!-- <youtube v-for="items in data" :key="items" /> -->
     <you-tube 
         class="container youtube"
-        src="https://www.youtube.com/watch?v=G3nYrw9MMGw&ab_channel=NiekompatybilnyX" 
+        :src="ABOUTUS_JSON.videoUrl" 
         @ready="onReady"
-        ref="youtube" />
+        ref="youtube" /> 
+        
         
 </div>
 </template>
