@@ -23,6 +23,7 @@
     "vue-router": "^4.0.12",
     "vue3-animate-onscroll": "^1.0.6",
     "vue3-youtube": "^0.1.9",
+    "vuejs-paginate-next": "^1.0.2",
     "vuex": "^4.0.2"
   },
   "devDependencies": {

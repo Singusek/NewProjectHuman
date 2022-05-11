@@ -1,7 +1,10 @@
 <template>
 <div class="all">
     <div class="film video-container">
-        <iframe class="video" :src="myTrim2(embedHtml)" frameborder="0" allowfullscreen/>
+        <iframe 
+        class="video animate__animated animate__zoomIn" 
+        :src="myTrim2(embedHtml)" 
+        frameborder="0" allowfullscreen/>
     </div>
 </div>
 </template>
@@ -34,6 +37,7 @@ export default {
 .film {
    min-width: 200px;
    min-height: 150px;
+   
 }
 .all {
     margin: 25px;

@@ -10,6 +10,7 @@ import VueAnimateOnScroll from 'vue3-animate-onscroll';
 import YouTube from 'vue3-youtube'
 import axios from 'axios'
 import VueAxios from 'vue-axios'
+import Paginate from "vuejs-paginate-next";
 
 const app = createApp(App)
 
@@ -23,5 +24,6 @@ app.component('YouTube', YouTube);
 app.use(router)
 app.use(VueAnimateOnScroll);
 app.use(VueAxios, axios)
+app.use(Paginate)
 
 app.mount('#app')
