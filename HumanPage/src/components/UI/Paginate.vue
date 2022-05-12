@@ -13,7 +13,11 @@
 
 <script>
 export default {
-    
+    data() {
+        return {
+           
+        }
+    },
 }
 </script>
 
@@ -24,5 +28,8 @@ export default {
     border-radius: 3px;
     font-size: 1em;
     cursor: pointer;
+}
+.pagination-row {
+    padding: 5px;
 }
 </style>
