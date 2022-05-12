@@ -3,7 +3,9 @@
     <div class="row">
         <film 
             class="videos col s12 m12 l12 xl2"
-            v-for="item in  data.items"
+            v-for="item in dataFi()"
+            :visibleVideo="visibleVideo"
+            :currenPage="currenPage"
             :key="item"
             :embedHtml="item.player.embedHtml"/>
             <!-- <film 
@@ -12,8 +14,8 @@
             :key="item"
             :embedHtml="item.player.embedHtml"/> -->
     </div>
-     <paginate class="paginate center-align">
-     </paginate>
+     <!-- <paginate  class="paginate center-align">
+     </paginate> -->
    
     <!-- <div>{{ NextPage() }}</div> -->
      <!-- <ul class="pagination">
@@ -48,7 +50,8 @@ export default {
                 data: [],
                 currenPage: 0,
                 pageSize: 15,
-                visibleVideo: []
+                visibleVideo: [],
+                
             }
         },
     components: {
@@ -71,13 +74,15 @@ export default {
                 this.currenPage = pageNumber;
                 this.updateVisibleVideo();
             },
+            dataFi() {
+                return this.data.items 
+            },
             updateVisibleVideo() {
-                this.visibleVideo = this.Film.slice(this.currenPage * this.pageSize, (this.currenPage * this.pageSize) + this.pageSize);
+                this.visibleVideo = this.dataFi().slice(this.currenPage * this.pageSize, (this.currenPage * this.pageSize) + this.pageSize);
 
-                if (this.visibleVideo.length == 0 && this.currenPage > 0) {
-                    this.updatePage(this.currenPage - 1);
-                }
-            }
+            },
+            
+
             // NextPage() {
             //     return this.data.nextPageToken
             // }
