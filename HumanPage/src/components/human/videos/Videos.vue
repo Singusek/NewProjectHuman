@@ -16,20 +16,20 @@
     <li class="waves-effect"><a href="#!">5</a></li>
     <li class="waves-effect"><a href="#!"><i class="material-icons">chevron_right</i></a></li>
   </ul> -->
-  <paginate
+  <!-- <paginate
     class="pagination"
     :page-count="4"
     :click-handler="functionName"
     :prev-text="'Prev'"
     :next-text="'Next'"
     :container-class="'className'">
-    </paginate>
+    </paginate> -->
 </div>
 </template>
 
 <script>
 import Film from '../film/Film.vue'
-import Paginate from 'vuejs-paginate-next';
+// import Paginate from 'vuejs-paginate-next';
 
 export default {
     data() {
@@ -39,7 +39,7 @@ export default {
         },
     components: {
         Film,
-        paginate: Paginate,
+        // paginate: Paginate,
     },
     mounted() {
             fetch('https://youtube.googleapis.com/youtube/v3/playlists?part=player&channelId=UCJrOtniJ0-NWz37R30urifQ&maxResults=15&key=AIzaSyCm1-B66mC_hDqEzv4wAQ-ORER9WSoqGQU')
@@ -59,11 +59,11 @@ export default {
 </script>
 
 <style scoped>
-    @import "https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css";
+    /* @import "https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css"; */
   
-    .pagination {
+    /* .pagination {
         justify-content: center;
-    }
+    } */
    .row {
        margin-top: 50px;
        margin-bottom: 70px;

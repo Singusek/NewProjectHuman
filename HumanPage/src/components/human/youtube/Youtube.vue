@@ -18,20 +18,21 @@ export default {
         data() {
             return {
                 data: [],
+                api: process.env.VUE_APP_API
             }
         },
         mounted() {
-            fetch('https://youtube.googleapis.com/youtube/v3/playlists?part=player&channelId=UCj89LC_NXjDqcacxHSswI5Q&maxResults=5&key=AIzaSyCm1-B66mC_hDqEzv4wAQ-ORER9WSoqGQU')
+            fetch(`https://youtube.googleapis.com/youtube/v3/playlists?part=player&channelId=UCj89LC_NXjDqcacxHSswI5Q&maxResults=5&key=${api}`)
             .then(res => res.json())
             .then(data => this.data = data)
             .then(data => console.log(data))
             .catch(err => console.log(err.message))
         },
-        methods: {
-            ApiKey() {
-                return console.log(process.env.VUE_APP_API)
-            }
-        },
+        // methods: {
+        //     ApiKey() {
+        //         return console.log(process.env.VUE_APP_API)
+        //     }
+        // },
         components: {
              Videos
         },
