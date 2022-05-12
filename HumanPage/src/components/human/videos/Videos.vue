@@ -14,6 +14,12 @@
             :key="item"
             :embedHtml="item.player.embedHtml"/> -->
     </div>
+    <paginate
+        :data="data"
+        :page:update="updatePage"
+        :currenPage="currenPage"
+        :pageSize="pageSize">
+      </paginate>
      <!-- <paginate  class="paginate center-align">
      </paginate> -->
    
@@ -78,7 +84,7 @@ export default {
                 return this.data.items 
             },
             updateVisibleVideo() {
-                this.visibleVideo = this.dataFi().slice(this.currenPage * this.pageSize, (this.currenPage * this.pageSize) + this.pageSize);
+               this.visibleVideo = this.dataFi().slice(this.currenPage * this.pageSize, (this.currenPage * this.pageSize) + this.pageSize);
 
             },
             
