@@ -11,6 +11,7 @@ import YouTube from 'vue3-youtube'
 import axios from 'axios'
 import VueAxios from 'vue-axios'
 import Paginate from "vuejs-paginate-next";
+import VuePaginationTw from "vue-pagination-tw";
 
 const app = createApp(App)
 
@@ -20,6 +21,7 @@ app.component('contact-card', ContactCard);
 app.component('the-header', TheHeader);
 app.component('the-footer', TheFooter);
 app.component('YouTube', YouTube);
+app.component("VuePaginationTw", VuePaginationTw);
 
 app.use(router)
 app.use(VueAnimateOnScroll);

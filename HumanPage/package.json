@@ -20,6 +20,7 @@
     "vue-animate-onscroll": "^1.0.8",
     "vue-animate-scroll": "^0.1.5",
     "vue-axios": "^3.4.1",
+    "vue-pagination-tw": "^0.1.2",
     "vue-router": "^4.0.12",
     "vue3-animate-onscroll": "^1.0.6",
     "vue3-youtube": "^0.1.9",
