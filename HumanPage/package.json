@@ -14,6 +14,7 @@
     "dotenv": "^16.0.0",
     "dotenv-webpack": "^7.1.0",
     "gsap": "^3.10.4",
+    "laravel-vue-pagination": "^3.0.0",
     "materialize-css": "^1.0.0-rc.2",
     "sass": "^1.51.0",
     "v-pagination-3": "^0.1.7",

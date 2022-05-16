@@ -13,18 +13,8 @@
             v-for="item in data.items" 
             :key="item"
             :embedHtml="item.player.embedHtml"/> -->
-            <!-- <VuePaginationTw
-        :total-items="50"
-        :current-page="1"
-        :per-page="15"
-        @page-changed="getNextPage"
-        :go-button="false"
-        styled="centered"/> -->
-        <!-- <pagination v-model="page" :records="50" :per-page="15" :@paginate="myCallback"/> -->
     </div> 
-        
-
-       <paginate
+       <!-- <paginate
        class="pagination"
         :page-count="4"
         :page-range="15"
@@ -34,7 +24,8 @@
         :next-text="'Next'"
         :container-class="'pagination'"
         :page-class="'page-item'">
-        </paginate>
+        </paginate> -->
+
     <!-- <paginate
         :data="data"
         :page:update="updatePage"
@@ -44,24 +35,6 @@
      <!-- <paginate  class="paginate center-align">
      </paginate> -->
    
-    <!-- <div>{{ NextPage() }}</div> -->
-     <!-- <ul class="pagination">
-    <li class="disabled"><a href="#!"><i class="material-icons">chevron_left</i></a></li>
-    <li class="active"><a href="#!">1</a></li>
-    <li class="waves-effect"><a href="#!">2</a></li>
-    <li class="waves-effect"><a href="#!">3</a></li>
-    <li class="waves-effect"><a href="#!">4</a></li>
-    <li class="waves-effect"><a href="#!">5</a></li>
-    <li class="waves-effect"><a href="#!"><i class="material-icons">chevron_right</i></a></li>
-  </ul> -->
-  <!-- <paginate
-    class="pagination"
-    :page-count="4"
-    :click-handler="updatePage"
-    :prev-text="'Prev'"
-    :next-text="'Next'"
-    :container-class="'videos'">
-    </paginate> -->
     
 </div>
 </template>
@@ -70,6 +43,7 @@
 import Film from '../film/Film.vue'
 import Paginate from 'vuejs-paginate-next';
 
+
 // import "vue-pagination-tw/styles";
 // import Paginate from '../../UI/Paginate.vue'
 
@@ -77,13 +51,14 @@ export default {
     data() {
             return {
                 data: [],
+                video: [],
                 // page: 1,
                 // perPgae: 15
                 // page: 15,
                 // pageNum: 0
-                // currenPage: 0,
-                // pageSize: 15,
-                // visibleVideo: [],
+                currenPage: 0,
+                pageSize: 15,
+                visibleVideo: [],
                 
             }
         },
@@ -93,9 +68,9 @@ export default {
         // Pagination
         // Paginate
     },
-    onBeforeMount: function() {
-        this.updateVisibleVideo();
-    },
+    // onBeforeMount: function() {
+    //     this.updateVisibleVideo();
+    // },
     mounted() {
             fetch(`https://youtube.googleapis.com/youtube/v3/playlists?part=player&channelId=UCJrOtniJ0-NWz37R30urifQ&maxResults=50&key=AIzaSyCm1-B66mC_hDqEzv4wAQ-ORER9WSoqGQU`)
             .then(res => res.json())
@@ -104,43 +79,36 @@ export default {
             .catch(err => console.log(err.message))
         },
         methods: {
-            updatePage(pageNumber) {
-                this.currenPage = pageNumber;
-                this.updateVisibleVideo();
-            },
+            // updatePage(pageNumber) {
+            //     this.currenPage = pageNumber;
+            //     this.updateVisibleVideo();
+            // },
             dataFi() {
                 return this.data.items 
             },
-            updateVisibleVideo() {
-                this.dataFi().slice(this.currenPage * this.pageSize, (this.currenPage * this.pageSize) + this.pageSize);
-
+            update() {
+               this.visibleVideo = this.dataFi() // Czasami dziala jak sie odswierzy to nie dziala 
             },
-            videoPage() {
-                this.dataFi().slice(this.page * this.perPage);
-                console.log(videoPage);
-            }
+            // updatevisibleVideo() {
+            //     this.visibleVideo.slice(this.currenPage * this.pageSize, (this.currenPage * this.pageSize) + this.pageSize);
+            // }
+            // getResults() {
+            //      getResults(page = '&pageToken=CA8QAA') {
+            // axios.get('https://youtube.googleapis.com/youtube/v3/playlists?part=player&channelId=UCJrOtniJ0-NWz37R30urifQ&maxResults=15&key=AIzaSyCm1-B66mC_hDqEzv4wAQ-ORER9WSoqGQU' + page)
+            //     .then(response => {
+            //         this.laravelData = response.data;
+            //     });
+            // }
+            // updateVisibleVideo() {
+            //     this.dataFi().slice(this.currenPage * this.pageSize, (this.currenPage * this.pageSize) + this.pageSize);
+            // },
             // this.visibleVideo =
-
 
             // function dont working logic is god variable is empty ??? 
             
-
-            // NextPage() {
-            //     return this.data.nextPageToken
-            // }
         },
-            // getNextPage() {
-            //     return this.currentPage += 1;
-            // },
-    
-        clickCallback(pageNum)  {
-        console.log(pageNum)
-              }
+    }
 
-        }
-
-// https://youtube.googleapis.com/youtube/v3/playlists?part=player&channelId=UCj89LC_NXjDqcacxHSswI5Q&maxResults=5&key=AIzaSyCm1-B66mC_hDqEzv4wAQ-ORER9WSoqGQU
-// https://youtube.googleapis.com/youtube/v3/playlists?part=player&channelId=UCJrOtniJ0-NWz37R30urifQ&maxResults=50&key=AIzaSyCm1-B66mC_hDqEzv4wAQ-ORER9WSoqGQU api z 50 filmami
 </script>
 
 <style scoped>

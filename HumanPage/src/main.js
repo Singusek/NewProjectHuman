@@ -13,6 +13,7 @@ import VueAxios from 'vue-axios'
 import Paginate from "vuejs-paginate-next";
 import VuePaginationTw from "vue-pagination-tw";
 import Pagination from 'v-pagination-3';
+import LaravelVuePagination from 'laravel-vue-pagination';
 
 
 const app = createApp(App)
@@ -25,6 +26,7 @@ app.component('the-footer', TheFooter);
 app.component('YouTube', YouTube);
 app.component("VuePaginationTw", VuePaginationTw);
 app.component('pagination', Pagination);
+app.component('laravel-pagination', LaravelVuePagination);
 
 app.use(router)
 app.use(VueAnimateOnScroll);
