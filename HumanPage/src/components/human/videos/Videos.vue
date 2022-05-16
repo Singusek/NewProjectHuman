@@ -2,7 +2,7 @@
 <div class="container">
     <div class="row">
         <film 
-            class="videos col s12 m12 l12 xl2 page-item"
+            class="videos col s12 m12 l12 xl2"
             v-for="item in dataFi()"
             :visibleVideo="visibleVideo"
             :currenPage="currenPage"
@@ -13,27 +13,28 @@
             v-for="item in data.items" 
             :key="item"
             :embedHtml="item.player.embedHtml"/> -->
-    </div> 
-        <VuePaginationTw
+            <!-- <VuePaginationTw
         :total-items="50"
         :current-page="1"
         :per-page="15"
         @page-changed="getNextPage"
         :go-button="false"
-        styled="centered"/>
+        styled="centered"/> -->
+        <!-- <pagination v-model="page" :records="50" :per-page="15" :@paginate="myCallback"/> -->
+    </div> 
+        
 
-      <!-- <paginate
-      class="pagination"
-        v-model="page"
-        :page-count="5"
-        :page-range="3"
+       <paginate
+       class="pagination"
+        :page-count="4"
+        :page-range="15"
         :margin-pages="2"
         :click-handler="clickCallback"
         :prev-text="'Prev'"
         :next-text="'Next'"
-        :container-class="'container'"
+        :container-class="'pagination'"
         :page-class="'page-item'">
-    </paginate> -->
+        </paginate>
     <!-- <paginate
         :data="data"
         :page:update="updatePage"
@@ -68,14 +69,17 @@
 <script>
 import Film from '../film/Film.vue'
 import Paginate from 'vuejs-paginate-next';
-import "vue-pagination-tw/styles";
+
+// import "vue-pagination-tw/styles";
 // import Paginate from '../../UI/Paginate.vue'
 
 export default {
     data() {
             return {
                 data: [],
-                page: 15,
+                // page: 1,
+                // perPgae: 15
+                // page: 15,
                 // pageNum: 0
                 // currenPage: 0,
                 // pageSize: 15,
@@ -85,7 +89,8 @@ export default {
         },
     components: {
         Film,
-        // paginate: Paginate,
+        paginate: Paginate,
+        // Pagination
         // Paginate
     },
     onBeforeMount: function() {
@@ -107,9 +112,16 @@ export default {
                 return this.data.items 
             },
             updateVisibleVideo() {
-               this.visibleVideo = this.dataFi().slice(this.currenPage * this.pageSize, (this.currenPage * this.pageSize) + this.pageSize);
+                this.dataFi().slice(this.currenPage * this.pageSize, (this.currenPage * this.pageSize) + this.pageSize);
 
             },
+            videoPage() {
+                this.dataFi().slice(this.page * this.perPage);
+                console.log(videoPage);
+            }
+            // this.visibleVideo =
+
+
             // function dont working logic is god variable is empty ??? 
             
 
@@ -117,12 +129,13 @@ export default {
             //     return this.data.nextPageToken
             // }
         },
-            getNextPage() {
-                return this.currentPage += 1;
-            }
-        // clickCallback(pageNum)  {
-        // console.log(pageNum)
-        //       }
+            // getNextPage() {
+            //     return this.currentPage += 1;
+            // },
+    
+        clickCallback(pageNum)  {
+        console.log(pageNum)
+              }
 
         }
 
@@ -131,7 +144,7 @@ export default {
 </script>
 
 <style scoped>
-    /* @import "https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css"; */
+    @import "https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css";
     
   
     .pagination {
