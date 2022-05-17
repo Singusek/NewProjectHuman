@@ -1,21 +1,20 @@
 <template>
 <div class="container">
     <div class="row">
-        <film 
-            class="videos col s12 m12 l12 xl2"
-            v-for="item in updatevisibleVideo()"
-            :video="video"
-            :visibleVideo="visibleVideo"
-            :currenPage="currenPage"
-            :key="item"
-            :embedHtml="item.player.embedHtml"/>
+    <film 
+        class="videos col s12 m12 l12 xl2"
+        v-for="item in updatevisibleVideo()"
+        :video="video"
+        :currenPage="currenPage"
+        :key="item"
+        :embedHtml="item.player.embedHtml"/>
     </div> 
     <paginate
-    class="center-align"
-    v-bind:video="video"
-    v-on:page:update="updatePage"
-    v-bind:currenPage="currenPage"
-    v-bind:pageSize="pageSize">
+        class="center-align"
+        v-bind:video="video"
+        v-on:page:update="updatePage"
+        v-bind:currenPage="currenPage"
+        v-bind:pageSize="pageSize">
     </paginate>
 </div>
 </template>
@@ -31,7 +30,6 @@ export default {
                 video: [],
                 currenPage: 0,
                 pageSize: 15,
-                visibleVideo: [],
             }
         },
     components: {
@@ -52,7 +50,7 @@ export default {
                 this.updateVisibleVideo();
             },
             updatevisibleVideo() {
-              return this.video.slice(this.currenPage * this.pageSize, (this.currenPage * this.pageSize) + this.pageSize) // working!!!!
+              return this.video.slice(this.currenPage * this.pageSize, (this.currenPage * this.pageSize) + this.pageSize) 
             },
         },
     }
