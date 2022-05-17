@@ -21,13 +21,13 @@
 <script>
 export default {
   name: 'paginate',
-  props: ['data', 'currenPage', 'pageSize'],
+  props: ['video', 'currenPage', 'pageSize'],
   methods: {
     updatePage(pageNumber) {
       this.$emit('page:update', pageNumber);
     },
     totalPages() {
-      return Math.ceil(this.data.length / this.pageSize);
+      return Math.ceil(this.video.length / this.pageSize);
     },
     showPreviousLink() {
       return this.currenPage == 0 ? false : true;
@@ -43,14 +43,14 @@ export default {
 .pagination-btn {
   cursor: pointer;
 }
-/* .pagination-button {
+.pagination-button {
     padding: 8px;
     margin: 2px;
     border-radius: 3px;
     font-size: 1em;
     cursor: pointer;
 }
-.pagination-row {
+.pagination {
     padding: 5px;
-} */
+}
 </style>

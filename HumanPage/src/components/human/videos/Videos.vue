@@ -3,7 +3,7 @@
     <div class="row">
         <film 
             class="videos col s12 m12 l12 xl2"
-            v-for="item in dataFi()"
+            v-for="item in updatevisibleVideo()"
             :visibleVideo="visibleVideo"
             :currenPage="currenPage"
             :key="item"
@@ -60,6 +60,7 @@ export default {
                 pageSize: 15,
                 visibleVideo: [],
                 
+                
             }
         },
     components: {
@@ -75,6 +76,7 @@ export default {
             fetch(`https://youtube.googleapis.com/youtube/v3/playlists?part=player&channelId=UCJrOtniJ0-NWz37R30urifQ&maxResults=50&key=AIzaSyCm1-B66mC_hDqEzv4wAQ-ORER9WSoqGQU`)
             .then(res => res.json())
             .then(data => this.data = data)
+            .then(data => this.video = data.items)
             .then(data => console.log(data))
             .catch(err => console.log(err.message))
         },
@@ -83,21 +85,12 @@ export default {
             //     this.currenPage = pageNumber;
             //     this.updateVisibleVideo();
             // },
-            dataFi() {
-                return this.data.items 
+            updatevisibleVideo() {
+              return  this.video.slice(this.currenPage * this.pageSize, (this.currenPage * this.pageSize) + this.pageSize) // working!!!!
             },
-            update() {
-               this.visibleVideo = this.dataFi() // Czasami dziala jak sie odswierzy to nie dziala 
-            },
+            
             // updatevisibleVideo() {
             //     this.visibleVideo.slice(this.currenPage * this.pageSize, (this.currenPage * this.pageSize) + this.pageSize);
-            // }
-            // getResults() {
-            //      getResults(page = '&pageToken=CA8QAA') {
-            // axios.get('https://youtube.googleapis.com/youtube/v3/playlists?part=player&channelId=UCJrOtniJ0-NWz37R30urifQ&maxResults=15&key=AIzaSyCm1-B66mC_hDqEzv4wAQ-ORER9WSoqGQU' + page)
-            //     .then(response => {
-            //         this.laravelData = response.data;
-            //     });
             // }
             // updateVisibleVideo() {
             //     this.dataFi().slice(this.currenPage * this.pageSize, (this.currenPage * this.pageSize) + this.pageSize);
