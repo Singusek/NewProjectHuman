@@ -1,21 +1,11 @@
 <template>
 <div>
     <div v-if="totalPages() > 0" class="pagination">
-    <button v-if="showPreviousLink()" class="pagination-button" v-on:click="updatePage(currenPage - 1)">Prev</button>
+    <button v-if="showPreviousLink()" class="pagination-button" v-on:click="updatePage(currenPage - 1)"> Prev </button>
     {{ currenPage + 1 }} of {{ totalPages() }}
-    <button v-if="showNextLink()" class="pagination-button" v-on:click="updatePage(currenPage + 1)">Next</button>
+    <button v-if="showNextLink()" class="pagination-button" v-on:click="updatePage(currenPage + 1)"> Next </button>
   </div>
 </div>
-    <!-- <div>
-        <div class="pagination-row">
-        <button class="pagination-button">Prev</button>
-        <span v-for="(item, index) in new Array(10)" :key="index">
-        <button class="pagination-button">{{ index + 1 }}</button>  
-        </span>
-        <button class="pagination-button">Next</button>
-        </div>
-        <slot />
-    </div> -->
 </template>
 
 <script>
