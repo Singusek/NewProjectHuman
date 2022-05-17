@@ -25,6 +25,8 @@
     "vue-pagination-tw": "^0.1.2",
     "vue-router": "^4.0.12",
     "vue3-animate-onscroll": "^1.0.6",
+    "vue3-loading-overlay": "^0.0.0",
+    "vue3-loading-screen": "^1.0.2",
     "vue3-youtube": "^0.1.9",
     "vuejs-paginate-next": "^1.0.2",
     "vuex": "^4.0.2"

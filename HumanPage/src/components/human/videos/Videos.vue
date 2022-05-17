@@ -1,4 +1,6 @@
 <template>
+<div>
+<page-loader v-if="isLoading"> </page-loader>
 <div class="container">
     <div class="row">
     <film 
@@ -17,13 +19,13 @@
         v-bind:pageSize="pageSize">
     </paginate>
 </div>
+</div>
 </template>
 
 <script>
-
 import Film from '../film/Film.vue'
 import Paginate from '../../UI/Paginate.vue'
-
+import PageLoader from '../../UI/PageLoader.vue'
 export default {
     data() {
             return {
@@ -31,11 +33,13 @@ export default {
                 video: [],
                 currenPage: 0,
                 pageSize: 4,
+                isLoading: true
             }
         },
     components: {
         Film,
-        Paginate
+        Paginate,
+        PageLoader
     },
     mounted() {
             fetch(`https://youtube.googleapis.com/youtube/v3/playlists?part=player&channelId=UCJrOtniJ0-NWz37R30urifQ&maxResults=50&key=AIzaSyCm1-B66mC_hDqEzv4wAQ-ORER9WSoqGQU`)
@@ -44,6 +48,10 @@ export default {
             .then(data => this.video = data.items)
             .then(data => console.log(data))
             .catch(err => console.log(err.message))
+
+            setTimeout(() => {
+            this.isLoading = false;
+            }, 1500);
         },
         methods: {
             updatePage(pageNumber) {
