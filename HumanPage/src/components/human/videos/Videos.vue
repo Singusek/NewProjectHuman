@@ -54,7 +54,6 @@ export default {
             },
         },
     }
-
 </script>
 
 <style scoped>
@@ -63,6 +62,11 @@ export default {
        margin-bottom: 70px;
    }
    .container {
-       height: 100%;
+       height: 90vh;
    }
+   @media screen and (max-width: 1024px) {
+     .container {
+       height: 100%;
+        }
+    }
 </style>

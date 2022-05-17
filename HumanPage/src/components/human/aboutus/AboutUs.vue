@@ -4,23 +4,16 @@
         <h4 class="center-align col s12 m12 l12 xl12">O NAS</h4>
         <div class="container">{{ ABOUTUS_JSON.text }}</div>
     </div>
-    <!-- <youtube v-for="item in items" :key="item" :player="items.player" :embedHtml="player.embedHtml"/> -->
-    <!-- <youtube v-for="items in data" :key="items" /> -->
     <you-tube 
         class="container youtube"
         :src="ABOUTUS_JSON.videoUrl" 
         @ready="onReady"
-        ref="youtube" /> 
-        
-        
+        ref="youtube" />  
 </div>
 </template>
 
 <script>
 import ABOUTUS_JSON from '../../../data/ABOUTUS_JSON.json';
-import Youtube from '../youtube/Youtube.vue';
-
-
 
 export default {
      data() {
@@ -28,38 +21,7 @@ export default {
             ABOUTUS_JSON: ABOUTUS_JSON
         }
     },
-    components: {
-        // Youtube
-        
-    },
     props: ['text'],
-    // mounted() {
-    //     fetch('https://youtube.googleapis.com/youtube/v3/playlists?part=player&channelId=UCj89LC_NXjDqcacxHSswI5Q&maxResults=5&key=AIzaSyCm1-B66mC_hDqEzv4wAQ-ORER9WSoqGQU')
-    //         .then(res => res.json())
-    //         .then(data => this.items = data)
-    //         .then(data => this.player = data)
-    //         // .then(data => this.embedHtml = data)
-    //         .catch(err => console.log(err.message))
-    //         // axios
-    // },
-    // mounted() {
-    //         // fetch('https://youtube.googleapis.com/youtube/v3/playlists?part=snippet&channelId=UCRUKO34OGs6wfLGUcGlnU5g&key=AIzaSyCm1-B66mC_hDqEzv4wAQ-ORER9WSoqGQU')
-    //         // .then(res => res.json())
-    //         // .then(data => this.items = data)
-    //         // .catch(err => console.log(err.message))
-    //             //bozenka player
-    //         fetch('https://youtube.googleapis.com/youtube/v3/playlists?part=player&channelId=UCj89LC_NXjDqcacxHSswI5Q&maxResults=5&key=AIzaSyCm1-B66mC_hDqEzv4wAQ-ORER9WSoqGQU')
-    //         .then(res => res.json())
-    //         .then(data => this.data = data)
-    //         .then(data => console.log(data))
-    //         // .then(data => this.embedHtml = data)
-    //         .catch(err => console.log(err.message))
-    //         // axios
-    //         // .get('https://youtube.googleapis.com/youtube/v3/playlists?part=snippet&channelId=UCRUKO34OGs6wfLGUcGlnU5g&key=AIzaSyCm1-B66mC_hDqEzv4wAQ-ORER9WSoqGQU')
-    //         // .then(response => (this.data = response))
-    //         // .then(response => (this.items = response))
-    //         // .then(data => console.log(data))
-    //     },
 }
 </script>
 

@@ -42,5 +42,4 @@ export default {
 .all {
     margin: 25px;
 }
-
 </style>
