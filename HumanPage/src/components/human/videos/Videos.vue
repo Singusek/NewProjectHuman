@@ -2,7 +2,7 @@
 <div class="container">
     <div class="row">
     <film 
-        class="videos col s12 m12 l12 xl2"
+        class="videos col s12 m12 l13 xl6 animate__animated animate__zoomIn"
         v-for="item in updatevisibleVideo()"
         :video="video"
         :currenPage="currenPage"
@@ -20,6 +20,7 @@
 </template>
 
 <script>
+
 import Film from '../film/Film.vue'
 import Paginate from '../../UI/Paginate.vue'
 
@@ -29,7 +30,7 @@ export default {
                 data: [],
                 video: [],
                 currenPage: 0,
-                pageSize: 15,
+                pageSize: 4,
             }
         },
     components: {
@@ -58,11 +59,11 @@ export default {
 
 <style scoped>
    .row {
-       margin-top: 50px;
-       margin-bottom: 70px;
+       margin-top: 30px;
+       margin-bottom: 50px;
    }
    .container {
-       height: 90vh;
+       height: 95vh;
    }
    @media screen and (max-width: 1024px) {
      .container {

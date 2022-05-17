@@ -41,6 +41,6 @@ export default {
     cursor: pointer;
 }
 .pagination {
-    padding: 5px;
+    padding: 0px;
 }
 </style>

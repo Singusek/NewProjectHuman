@@ -35,11 +35,11 @@ export default {
   
 }
 .film {
-   min-width: 200px;
-   min-height: 150px;
+   min-width: 300px;
+   min-height: 200px;
    
 }
-.all {
-    margin: 25px;
+.row .col {
+    padding-top: 22px;
 }
 </style>
