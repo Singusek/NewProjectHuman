@@ -9,7 +9,16 @@
 </template>
 
 <script>
+import PageLoader from '../../components/UI/PageLoader.vue'
 export default {
+  data() {
+    return {
+      isLoading: true
+    }
+  },
+  components: {
+    PageLoader
+  },
   name: 'paginate',
   props: ['video', 'currenPage', 'pageSize'],
   methods: {
@@ -25,7 +34,12 @@ export default {
     showNextLink() {
       return this.currenPage == (this.totalPages() - 1) ? false : true;
     }
-  }
+  },
+  mounted() {
+    setTimeout(() => {
+      this.isLoading = false;
+       }, 1500);
+  },
 }
 </script>
 

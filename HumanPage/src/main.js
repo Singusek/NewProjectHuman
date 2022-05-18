@@ -14,11 +14,8 @@ import Paginate from "vuejs-paginate-next";
 import VuePaginationTw from "vue-pagination-tw";
 import Pagination from 'v-pagination-3';
 import LaravelVuePagination from 'laravel-vue-pagination';
-import Loading from 'vue3-loading-screen'
-
 
 const app = createApp(App)
-
 
 app.component('base-button', BaseButton);
 app.component('contact-card', ContactCard);
@@ -33,6 +30,6 @@ app.use(router)
 app.use(VueAnimateOnScroll);
 app.use(VueAxios, axios)
 app.use(Paginate)
-app.use(Loading)
+
 
 app.mount('#app')

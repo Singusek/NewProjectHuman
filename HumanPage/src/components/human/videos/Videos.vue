@@ -1,6 +1,6 @@
 <template>
 <div>
-<page-loader v-if="isLoading"> </page-loader>
+<!-- <page-loader v-if="isLoading"/>  -->
 <div class="container">
     <div class="row">
     <film 
@@ -25,7 +25,7 @@
 <script>
 import Film from '../film/Film.vue'
 import Paginate from '../../UI/Paginate.vue'
-import PageLoader from '../../UI/PageLoader.vue'
+// import PageLoader from '../../UI/PageLoader.vue'
 export default {
     data() {
             return {
@@ -33,25 +33,27 @@ export default {
                 video: [],
                 currenPage: 0,
                 pageSize: 4,
-                isLoading: true
+                // isLoading: true
             }
         },
     components: {
         Film,
         Paginate,
-        PageLoader
+        // PageLoader
     },
     mounted() {
+            
             fetch(`https://youtube.googleapis.com/youtube/v3/playlists?part=player&channelId=UCJrOtniJ0-NWz37R30urifQ&maxResults=50&key=AIzaSyCm1-B66mC_hDqEzv4wAQ-ORER9WSoqGQU`)
             .then(res => res.json())
             .then(data => this.data = data)
             .then(data => this.video = data.items)
             .then(data => console.log(data))
             .catch(err => console.log(err.message))
+            
 
-            setTimeout(() => {
-            this.isLoading = false;
-            }, 1500);
+            // setTimeout(() => {
+            // this.isLoading = false;
+            // }, 1200);
         },
         methods: {
             updatePage(pageNumber) {
@@ -63,9 +65,10 @@ export default {
             },
         },
     }
+    
 </script>
 
-<style scoped>
+<style  scoped>
    .row {
        margin-top: 30px;
        margin-bottom: 50px;
