@@ -23,7 +23,7 @@ export default {
   props: ['video', 'currenPage', 'pageSize'],
   methods: {
     updatePage(pageNumber) {
-      this.$emit('page:update', pageNumber);
+      this.$emit('page:update', pageNumber); 
     },
     totalPages() {
       return Math.ceil(this.video.length / this.pageSize);
@@ -36,9 +36,10 @@ export default {
     }
   },
   mounted() {
-    setTimeout(() => {
-      this.isLoading = false;
-       }, 1500);
+  
+    // setTimeout(() => {
+    //   this.isLoading = false;
+    //    }, 1500);
   },
 }
 </script>
