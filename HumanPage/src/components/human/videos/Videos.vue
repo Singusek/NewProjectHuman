@@ -1,10 +1,15 @@
 <template>
 <div>
-<page-loader v-if="isLoading"/>
+<!-- <page-loader v-if="isLoading"/> -->
 <div class="container">
     <div class="row">
+       
          <!-- <div v-if="loading">
              </div> -->
+        <!-- <loading :active="isLoading" 
+        :can-cancel="true" 
+        :on-cancel="onCancel"
+        :is-full-page="fullPage"></loading> -->
     <film
         class="videos col s12 m12 l13 xl6 animate__animated animate__zoomIn"
         v-for="item in updatevisibleVideo()"
@@ -29,7 +34,7 @@
 import Film from '../film/Film.vue'
 import Paginate from '../../UI/Paginate.vue'
 import PageLoader from '../../UI/PageLoader.vue'
-// import axios from 'axios'
+import axios from 'axios'
 
 export default {
     data() {
@@ -38,30 +43,49 @@ export default {
                 video: [],
                 currenPage: 0,
                 pageSize: 4,
-                isLoading: true,
+               
+                
+                // isLoading: true,
                 // loading: false
             }
         },
     components: {
         Film,
         Paginate,
-        PageLoader
+        PageLoader,
+        
         // PageLoader
     },
     mounted() {
+            this.fetch()
+            // fetch(`https://youtube.googleapis.com/youtube/v3/playlists?part=player&channelId=UCJrOtniJ0-NWz37R30urifQ&maxResults=50&key=AIzaSyCm1-B66mC_hDqEzv4wAQ-ORER9WSoqGQU`)
+            // .then(res => res.json())
+            // .then(data => this.data = data)
+            // .then(data => this.video = data.items)
+            // .then(data => console.log(data))
+            // .catch(err => console.log(err.message))
 
-            fetch(`https://youtube.googleapis.com/youtube/v3/playlists?part=player&channelId=UCJrOtniJ0-NWz37R30urifQ&maxResults=50&key=AIzaSyCm1-B66mC_hDqEzv4wAQ-ORER9WSoqGQU`)
-            .then(res => res.json())
-            .then(data => this.data = data)
-            .then(data => this.video = data.items)
-            .then(data => console.log(data))
-            .catch(err => console.log(err.message))
-
-            setTimeout(() => {
-            this.isLoading = false;
-            }, 1200);
+            // setTimeout(() => {
+            // this.isLoading = false;
+            // }, 1200);
         },
         methods: {
+            async fetch () {
+                this.$isLoading(true)
+                let data = await axios.get('https://youtube.googleapis.com/youtube/v3/playlists?part=player&channelId=UCJrOtniJ0-NWz37R30urifQ&maxResults=50&key=AIzaSyCm1-B66mC_hDqEzv4wAQ-ORER9WSoqGQU')
+
+                this.data = data.data
+                this.video = data.data.items
+
+                
+                // this.$loading(false)
+                
+                // this.$isLoading(false) // hide loading screen
+                
+                
+                setTimeout(() => {
+                this.$isLoading(false)}, 1200);
+            },
             //  fetchComments: function () {
             //     $.ajax({
             //         url: `https://youtube.googleapis.com/youtube/v3/playlists?part=player&channelId=UCJrOtniJ0-NWz37R30urifQ&maxResults=50&key=AIzaSyCm1-B66mC_hDqEzv4wAQ-ORER9WSoqGQU`,

@@ -14,6 +14,8 @@ import Paginate from "vuejs-paginate-next";
 import VuePaginationTw from "vue-pagination-tw";
 import Pagination from 'v-pagination-3';
 import LaravelVuePagination from 'laravel-vue-pagination';
+import Loading from 'vue3-loading-screen'
+
 
 const app = createApp(App)
 
@@ -30,6 +32,12 @@ app.use(router)
 app.use(VueAnimateOnScroll);
 app.use(VueAxios, axios)
 app.use(Paginate)
+app.use(Loading, {
+    bg: '#F0F8FFad',
+    icon: 'refresh',
+    size: 3,
+    icon_color: 'black',
+})
 
 
 app.mount('#app')
