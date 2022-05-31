@@ -17,6 +17,9 @@ export default {
       isLoading: true
     }
   },
+  // emits: {
+  //   loding: '<page-loader v-if="isLoading"/>'
+  // },
   components: {
     PageLoader
   },
@@ -25,7 +28,9 @@ export default {
   methods: {
     updatePage(pageNumber) {
       console.log('nastepna strona')
+      // this.$emit('setTimeout');
       this.$emit('page:update', pageNumber); 
+      // this.$emit('loading'); // nie mozna zrobic eventu metaoda emit
       // this.$emit('page:update', pageNumber, this.isLoading = false); 
 
       // setTimeout(() => {
