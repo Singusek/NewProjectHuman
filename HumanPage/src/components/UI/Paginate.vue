@@ -1,5 +1,6 @@
 <template>
 <div>
+  <!-- <page-loader v-if="isLoading"/> -->
     <div v-if="totalPages() > 0" class="pagination">
     <button v-if="showPreviousLink()" class="pagination-button" v-on:click="updatePage(currenPage - 1)"> Prev </button>
     {{ currenPage + 1 }} of {{ totalPages() }}
@@ -23,13 +24,23 @@ export default {
   props: ['video', 'currenPage', 'pageSize'],
   methods: {
     updatePage(pageNumber) {
+      console.log('nastepna strona')
       this.$emit('page:update', pageNumber); 
+      // this.$emit('page:update', pageNumber, this.isLoading = false); 
+
+      // setTimeout(() => {
+      // this.isLoading = false;
+      //  }, 1500);
+      
     },
     totalPages() {
-      return Math.ceil(this.video.length / this.pageSize);
+      return Math.ceil(this.video.length / this.pageSize); 
     },
     showPreviousLink() {
       return this.currenPage == 0 ? false : true;
+      // setTimeout(() => {
+      // this.isLoading = false;
+      //  }, 1500);
     },
     showNextLink() {
       return this.currenPage == (this.totalPages() - 1) ? false : true;
@@ -37,9 +48,9 @@ export default {
   },
   mounted() {
   
-    // setTimeout(() => {
-    //   this.isLoading = false;
-    //    }, 1500);
+    setTimeout(() => {
+      this.isLoading = false;
+       }, 1500);
   },
 }
 </script>

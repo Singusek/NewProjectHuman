@@ -1,19 +1,19 @@
 <template>
 <div>
-<page-loader v-if="isLoading"/> 
+<page-loader v-if="isLoading"/>
 <div class="container">
     <div class="row">
          <!-- <div v-if="loading">
              </div> -->
-    <film 
+    <film
         class="videos col s12 m12 l13 xl6 animate__animated animate__zoomIn"
         v-for="item in updatevisibleVideo()"
         :video="video"
         :currenPage="currenPage"
         :key="item"
         :embedHtml="item.player.embedHtml"/>
-          
-    </div> 
+
+    </div>
     <paginate
         class="center-align"
         v-bind:video="video"
@@ -49,38 +49,48 @@ export default {
         // PageLoader
     },
     mounted() {
-            
+
             fetch(`https://youtube.googleapis.com/youtube/v3/playlists?part=player&channelId=UCJrOtniJ0-NWz37R30urifQ&maxResults=50&key=AIzaSyCm1-B66mC_hDqEzv4wAQ-ORER9WSoqGQU`)
             .then(res => res.json())
             .then(data => this.data = data)
             .then(data => this.video = data.items)
             .then(data => console.log(data))
             .catch(err => console.log(err.message))
-            
+
             setTimeout(() => {
             this.isLoading = false;
-            }, 800);
+            }, 1200);
         },
         methods: {
+            //  fetchComments: function () {
+            //     $.ajax({
+            //         url: `https://youtube.googleapis.com/youtube/v3/playlists?part=player&channelId=UCJrOtniJ0-NWz37R30urifQ&maxResults=50&key=AIzaSyCm1-B66mC_hDqEzv4wAQ-ORER9WSoqGQU`,
+            //         method: 'GET',
+            //         success: function (data) {
+            //             this.data = this.data;
+            //         }
+            //     });
+            //  },
         //   makeRequest () {
-        //     this.loading = true //the loading begin
+        //     // this.loading = true
         //     axios
         //     .get('https://youtube.googleapis.com/youtube/v3/playlists?part=player&channelId=UCJrOtniJ0-NWz37R30urifQ&maxResults=50&key=AIzaSyCm1-B66mC_hDqEzv4wAQ-ORER9WSoqGQU')
-        //     .then(response => (this.info = response))
-        //     .then(data => (this.data = data)) 
-        //     .then(data =>   (this.video = data.items))
-        //     .finally(() => (this.loading = false)) 
+        //     .then((response) => {
+        //         console.log(response);
+        //         this.video = data.items;
+
+        //     })
         //   },
             updatePage(pageNumber) {
                 this.currenPage = pageNumber;
                 this.updateVisibleVideo();
             },
             updatevisibleVideo() {
-              return this.video.slice(this.currenPage * this.pageSize, (this.currenPage * this.pageSize) + this.pageSize) 
+              return this.video.slice(this.currenPage * this.pageSize, (this.currenPage * this.pageSize) + this.pageSize)
             },
         },
     }
-    
+
 </script>
 
 <style  scoped>
