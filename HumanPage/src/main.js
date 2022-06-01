@@ -33,10 +33,15 @@ app.use(VueAnimateOnScroll);
 app.use(VueAxios, axios)
 app.use(Paginate)
 app.use(Loading, {
-    bg: '#F0F8FFad',
+    bg: '#FFFAFAad',
     icon: 'refresh',
     size: 3,
     icon_color: 'black',
+    slot: `
+    <div class="px-5 py-3 bg-gray-800 rounded">
+      <h3 class="text-3xl text-white"><i class="fas fa-circle-notch fa-spin"></i><img class="img" src="../src/img/350.png"/></h3>
+    </div>
+  `
 })
 
 
