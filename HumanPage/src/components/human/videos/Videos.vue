@@ -73,18 +73,10 @@ export default {
             async fetch () {
                 this.$isLoading(true)
                 let data = await axios.get('https://youtube.googleapis.com/youtube/v3/playlists?part=player&channelId=UCJrOtniJ0-NWz37R30urifQ&maxResults=50&key=AIzaSyCm1-B66mC_hDqEzv4wAQ-ORER9WSoqGQU')
-
                 this.data = data.data
                 this.video = data.data.items
-
-                
-                // this.$loading(false)
-                
-                // this.$isLoading(false) // hide loading screen
-                
-                
                 setTimeout(() => {
-                this.$isLoading(false)}, 1200);
+                this.$isLoading(false)}, 1400);
             },
             //  fetchComments: function () {
             //     $.ajax({

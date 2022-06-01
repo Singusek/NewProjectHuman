@@ -27,14 +27,18 @@ export default {
   props: ['video', 'currenPage', 'pageSize'],
   methods: {
     updatePage(pageNumber) {
+      this.$isLoading(true)
+      setTimeout(() => {
+      this.$isLoading(false)}, 1400);
       this.$emit('page:update', pageNumber); // ta funkcje polaczyc z lodingiem
+      
       // this.$isLoading(true)
       // this.$emit('loading'); // nie mozna zrobic eventu metaoda emit
       // this.$emit('page:update', pageNumber, this.isLoading = false); 
 
       // setTimeout(() => {
-      // this.isLoading = false;
-      //  }, 1500);
+      // this.$isLoading = false;
+      //  }, 1000);
       
     },
     totalPages() {
