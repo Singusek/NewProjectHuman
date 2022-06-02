@@ -1,6 +1,6 @@
 <template>
 <div class="main-div">
-    <div class="photo">
+    <div class="photo center-align">
     <base-card></base-card>
     </div>
     <main-card style="padding-top: 30px;"></main-card>
@@ -59,6 +59,7 @@ export default {
 <style>
 .photo {
     background-color: rgb(54, 53, 53);  
+   
 }
 .photo-icons {
     background-color: rgb(54, 53, 53);  
