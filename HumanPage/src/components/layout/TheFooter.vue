@@ -40,6 +40,8 @@
 <style scoped>
 .page-footer {
     background-color: rgb(41, 40, 40);
+    bottom: 0;
+    margin-bottom: 0;
     /* max-height: 400px; */
 }
 .icons {
