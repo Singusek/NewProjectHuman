@@ -1,7 +1,7 @@
 <template>
 <div class="container">
    <div class="row" >
-       <div class="col s4 m4 l8 ">
+       <div class="col s4 m4 l4 xl4">
            <div class="card">
                <div class="card-image">
                    <img src="src/img/1.jpg" class="responsive-img" alt="" />
@@ -18,7 +18,7 @@
                </div>
            </div>
        </div>
-       <div class="col s4 m4 l8">
+       <div class="col s4 m4 l4 xl4">
            <div class="card">
                <div class="card-image">
                    <img src="src/img/2.jpg" class="responsive-img" alt="" />
@@ -35,7 +35,7 @@
                </div>
            </div>
        </div>
-       <div class="col s4 m4 l8">
+       <div class="col s4 m4 l4 xl4">
            <div class="card">
                <div class="card-image">
                    <img src="src/img/3.jpg" alt="" class="responsive-img"/>
