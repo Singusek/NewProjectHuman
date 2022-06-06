@@ -1,5 +1,6 @@
 <template>
 <div>
+  <transition-group appear @enter="enter"> 
     <div class="container">
       <div id="txt">
       <div class="glitch top">HUMAN</div>
@@ -14,10 +15,14 @@
     <div>
         <span class="sub">BIAŁYSTOK</span> -->
     </div>
+     </transition-group>
 </div>
 </template>
 
 <script>
+import gsap from 'gsap';
+ import { CSSPlugin } from 'gsap/CSSPlugin'
+  gsap.registerPlugin(CSSPlugin);
 export default {
   data() {
     return {
@@ -25,21 +30,48 @@ export default {
     }
   },
   mounted() {
-    
+      // var tl = this.$gsap.timeline({repeat: -1,repeatDelay: 2})
+
+      // tl.to('.glitch', 0.1, {skewX:70,ease: Power4.easeInOut})
+      // .to('.glitch', 0.04, {skewX:0,ease: Power4.easeInOut})
+      // .to('.glitch', 0.04, {opacity:0})
+      // .to('.glitch', 0.04, {opacity:1})
+      // .to('.glitch', 0.04, {x:-20})
+      // .to('.glitch', 0.04, {x:0})
+      // .add("split", 0)
+      // .to('.top', 0.5, {x:-60,ease: Power4.easeInOut},'split')
+      // .to('.bottom', 0.5, {x:60,ease: Power4.easeInOut},'split')
+      // .to('.glitch', 0.08, { className: '+=redShadow'},'split')
+
+      // .to('#txt', 0, { scale:1.1},'split')
+      // .to('#txt', 0, { scale:1}, "+=0.02")
+
+      // .to('.glitch', 0.08, { className: '-=redShadow'}, "+=0.09")
+      // .to('.glitch', 0.03,{ className: '+=greenShadow'},'split')
+      // .to('.glitch', 0.03,{ className: '-=greenShadow'},"+=0.01")
+
+      // .to('.top', 0.2, {x:0,ease: Power4.easeInOut})
+      // .to('.bottom', 0.2, {x:0,ease: Power4.easeInOut})
+
+      // .to('.glitch', 0.02, {scaleY:1.1,ease: Power4.easeInOut})
+      // .to('.glitch', 0.04, {scaleY:1,ease: Power4.easeInOut})
   },
   methods: {
-    animation: () => {
-      var tl = this.$gsap.timeline({repeat: -1,repeatDelay: 2})
+    enter(tl)  {
+      var tl = this.gsap.TimelineMax({repeat: -1, repeatDelay: 2})
 
-      tl.to('.glitch', 0.1, {skewX:70,ease: Power4.easeInOut})
-      .to('.glitch', 0.04, {skewX:0,ease: Power4.easeInOut})
+
+      // var tl = this.$gsap.TimelineMax({repeat: -1,repeatDelay: 2})
+
+      tl.to('.glitch', 0.1, {skewX:70, ease: Power4.easeInOut})
+      .to('.glitch', 0.04, {skewX:0, ease: Power4.easeInOut})
       .to('.glitch', 0.04, {opacity:0})
       .to('.glitch', 0.04, {opacity:1})
       .to('.glitch', 0.04, {x:-20})
       .to('.glitch', 0.04, {x:0})
       .add("split", 0)
-      .to('.top', 0.5, {x:-60,ease: Power4.easeInOut},'split')
-      .to('.bottom', 0.5, {x:60,ease: Power4.easeInOut},'split')
+      .to('.top', 0.5, {x:-60, ease: Power4.easeInOut},'split')
+      .to('.bottom', 0.5, {x:60, ease: Power4.easeInOut},'split')
       .to('.glitch', 0.08, { className: '+=redShadow'},'split')
 
       .to('#txt', 0, { scale:1.1},'split')
@@ -49,11 +81,11 @@ export default {
       .to('.glitch', 0.03,{ className: '+=greenShadow'},'split')
       .to('.glitch', 0.03,{ className: '-=greenShadow'},"+=0.01")
 
-      .to('.top', 0.2, {x:0,ease: Power4.easeInOut})
-      .to('.bottom', 0.2, {x:0,ease: Power4.easeInOut})
+      .to('.top', 0.2, {x:0, ease: Power4.easeInOut})
+      .to('.bottom', 0.2, {x:0, ease: Power4.easeInOut})
 
-      .to('.glitch', 0.02, {scaleY:1.1,ease: Power4.easeInOut})
-      .to('.glitch', 0.04, {scaleY:1,ease: Power4.easeInOut})
+      .to('.glitch', 0.02, {scaleY:1.1, ease: Power4.easeInOut})
+      .to('.glitch', 0.04, {scaleY:1, ease: Power4.easeInOut})
   },
   // methods: {
   //    enter() {
@@ -67,7 +99,7 @@ export default {
 </script>
 
 <style scoped>
-body {
+.container {
   background:#1a1a1a;
   color:#fff;
   font-family:Helvetica;
@@ -75,7 +107,6 @@ body {
 }
 
 .bottom {
-
    font-size:100px;
   -webkit-clip-path: inset(58% 0 0 0);
   clip-path: inset(58% 0 0 0);
@@ -85,8 +116,6 @@ body {
    -webkit-clip-path: inset(0 0 41% 0);
   clip-path: inset(0 0 41%);
 }
-
-
 
 .redShadow {  text-shadow:-3px 0 red;}
 .greenShadow {  text-shadow:-3px 0 red;}
