@@ -1,164 +1,112 @@
 <template>
 <div>
     <div class="container">
-        <p class="glitch">
+      <div id="txt">
+      <div class="glitch top">HUMAN</div>
+      <div class="glitch bottom">HUMAN</div>
+      </div>
+        <!-- <p class="glitch">
          <span aria-hidden="true">HUMAN</span>
         HUMAN
         <span aria-hidden="true">HUMAN</span>
         </p>
     </div>
     <div>
-        <span class="sub">BIAŁYSTOK</span>
+        <span class="sub">BIAŁYSTOK</span> -->
     </div>
 </div>
 </template>
 
+<script>
+export default {
+  data() {
+    return {
+      
+    }
+  },
+  mounted() {
+    
+  },
+  methods: {
+    animation: () => {
+      var tl = this.$gsap.timeline({repeat: -1,repeatDelay: 2})
+
+      tl.to('.glitch', 0.1, {skewX:70,ease: Power4.easeInOut})
+      .to('.glitch', 0.04, {skewX:0,ease: Power4.easeInOut})
+      .to('.glitch', 0.04, {opacity:0})
+      .to('.glitch', 0.04, {opacity:1})
+      .to('.glitch', 0.04, {x:-20})
+      .to('.glitch', 0.04, {x:0})
+      .add("split", 0)
+      .to('.top', 0.5, {x:-60,ease: Power4.easeInOut},'split')
+      .to('.bottom', 0.5, {x:60,ease: Power4.easeInOut},'split')
+      .to('.glitch', 0.08, { className: '+=redShadow'},'split')
+
+      .to('#txt', 0, { scale:1.1},'split')
+      .to('#txt', 0, { scale:1}, "+=0.02")
+
+      .to('.glitch', 0.08, { className: '-=redShadow'}, "+=0.09")
+      .to('.glitch', 0.03,{ className: '+=greenShadow'},'split')
+      .to('.glitch', 0.03,{ className: '-=greenShadow'},"+=0.01")
+
+      .to('.top', 0.2, {x:0,ease: Power4.easeInOut})
+      .to('.bottom', 0.2, {x:0,ease: Power4.easeInOut})
+
+      .to('.glitch', 0.02, {scaleY:1.1,ease: Power4.easeInOut})
+      .to('.glitch', 0.04, {scaleY:1,ease: Power4.easeInOut})
+  },
+  // methods: {
+  //    enter() {
+  //           gsap.to('.glitch', 0.1, {skewX:70,ease: Power4.easeInOut});
+  //           gsap.to('.glitch', 0.04, {skewX:0,ease: Power4.easeInOut});
+  //       },
+        
+  // },
+}
+}
+</script>
+
 <style scoped>
-/* //@import url('https://fonts.googleapis.com/css?family=Kanit:800');
-@import url('https://fonts.googleapis.com/css?family=Bungee+Shade');
-
-:root {
-  --f-size: 15;
-  --f-unit: 1vmin;
-  --f: calc(var(--f-size) * var(--f-unit));
-  --bg: #181717; 
-}
-
-*, *::after, *::before {
-  box-sizing: border-box;
-}
-
 body {
-  font-family: 'Bungee Shade', cursive;//'Kanit', sans-serif;
-  font-size: var(--f);
-  
-  background-color: var(--bg);
-  display: flex;
-  min-height: 100vh;
-  margin: 0;
-  overflow: hidden;
+  background:#1a1a1a;
+  color:#fff;
+  font-family:Helvetica;
+  overflow:hidden;
 }
 
-p {
-  flex: 1;
-  line-height: .75;
+.bottom {
+
+   font-size:100px;
+  -webkit-clip-path: inset(58% 0 0 0);
+  clip-path: inset(58% 0 0 0);
+}
+
+.top {
+   -webkit-clip-path: inset(0 0 41% 0);
+  clip-path: inset(0 0 41%);
+}
+
+
+
+.redShadow {  text-shadow:-3px 0 red;}
+.greenShadow {  text-shadow:-3px 0 red;}
+
+.glitch {position: absolute}
+
+#txt {
+  position:relative;
   margin: auto;
-  color: #1af0dc;
+  position: absolute;
+  top: 0; left: 0; bottom: 0; right: 0;
+  width:482px;
+  height:100px;
   text-align: center;
-  transform: scaleX(var(--scale, 1));
-  animation: glitch-p 11s infinite alternate;
-  
-  &::before,
-  &::after {
-    --top: 0;        // offset from top [0 - 10]
-    --left: 0;       // offset from left [0.001 - 1]
-    --v-height: 30%; // visible part
-    
-    --n-tenth: calc(var(--f-size) * .1 * var(--top));
-    --t-cut: calc(var(--n-tenth) / var(--f-size) * 100%);
-    --b-cut: calc(var(--t-cut) + var(--v-height));
-    
-    content: attr(data-text);
-    position: absolute;
-    width: 100%;
-    left: 0;
-    text-align: center;
-    
-    transform: translateX(calc(var(--left) * 100%));
-    
-    // this helps to get rid of pixelization
-    filter: drop-shadow(0 0 transparent); 
-    
-    text-shadow: calc(var(--left) * -3em) 0 .02em lime, 
-                 calc(var(--left) * -6em) 0 .02em #ff00e1;
-    
-    background-color: var(--bg);
-    clip-path: polygon(0% var(--t-cut), 100% var(--t-cut), 100% var(--b-cut), 0% var(--b-cut));
-  } 
-  
-  &::before {
-    animation: glitch-b 1.7s infinite alternate-reverse;
-  }
-  &::after {
-    animation: glitch-a 3.1s infinite alternate;
-  }
+  z-index:2;
+  font-size:100px;
+  color:#fff;
+  text-transform:uppercase;
 }
-
-@keyframes glitch-p {
-  17% { --scale: .87; }
-  31% { --scale: 1.1; }
-  37% { --scale: 1.3; }
-  47% { --scale: .91; }
-  87% { --scale: 1; }
-}
-
-@keyframes glitch-a {
-  10%,30%,50%,70%,90% {
-    --top: 0;
-    --left: 0;
-  }
-  0% {
-   --v-height: 15%; 
-  }
-  20% {
-    --left: .005;
-  }
-  40% {
-    --left: .01;
-    --v-height: 20%;
-    --top: 3;
-  }
-  60% {
-    --left: .03;
-    --v-height: 25%;
-    --top: 6;
-  }
-  80% {
-    --left: .07;
-    --v-height: 5%;
-    --top: 8;
-  }
-  100% {
-    --left: .083;
-    --v-height: 30%;
-    --top: 1;
-  }
-}
-
-@keyframes glitch-b {
-    10%,30%,50%,70%,90% {
-    --top: 0;
-    --left: 0;
-  }
-  0% {
-   --v-height: 15%; 
-   --top: 10;
-  }
-  20% {
-    --left: -.005;
-  }
-  40% {
-    --left: -.01;
-    --v-height: 17%;
-    --top: 3;
-  }
-  60% {
-    --left: -.03;
-    --v-height: 35%;
-    --top: 6;
-  }
-  80% {
-    --left: -.07;
-    --v-height: 5%;
-    --top: 8;
-  }
-  100% {
-    --left: -.083;
-    --v-height: 30%;
-    --top: 1;
-  }
-} */
-.sub {
+/* .sub {
   color: #ff7708;
   letter-spacing: 1em;
   font-size: 32px;
@@ -185,8 +133,8 @@ p {
   font-weight: bold;
   text-transform: uppercase;
   position: relative;
-  text-shadow: 0.05em 0 0 #00fffc, -0.03em -0.04em 0 #fc00ff,
-    0.025em 0.04em 0 #fffc00;
+  text-shadow: 0.05em 0 0 #00fffc, -1em -1em 0 #fc00ff,
+    1em 1em 0 #fffc00;
   animation: glitch 725ms infinite;
 }
 
@@ -213,8 +161,8 @@ p {
 
 @keyframes glitch {
   0% {
-    text-shadow: 0.05em 0 0 #00fffc, -0.03em -0.04em 0 #ff0000,
-      0.025em 0.04em 0 #ff9100;
+    text-shadow: 0.05em 0 0 #00fffc, -0.5em -0.5em 0 #ff0000,
+      0.5em 0.5em 0 #ff9100;
   }
   15% {
     text-shadow: 0.05em 0 0 #00fffc, -0.03em -0.04em 0 #ff0000,
@@ -237,8 +185,8 @@ p {
       0 -0.04em 0 #ff9100;
   }
   100% {
-    text-shadow: -0.05em 0 0 #00fffc, -0.025em -0.04em 0 #ff0000,
-      -0.04em -0.025em 0 #ff9100;
+    text-shadow: -0.5em 0 0 #00fffc, -0.5em -0.5em 0 #ff0000,
+      -0.5em -0.5em 0 #ff9100;
   }
-}
+} */
 </style>
