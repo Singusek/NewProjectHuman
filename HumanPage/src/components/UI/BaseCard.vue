@@ -1,17 +1,22 @@
 <template>
 <div>
     <div class="container">
+      <transition-group 
+            appear
+            @before-enter="beforeEnter"
+            @enter="enter">
       <div id="txt">
       <div class="glitch top">HUMAN</div>
       <div class="glitch bottom">HUMAN</div>
       </div>
+      </transition-group>
         <!-- <p class="glitch">
          <span aria-hidden="true">HUMAN</span>
         HUMAN
         <span aria-hidden="true">HUMAN</span>
         </p>
     </div>
-    <div>
+    <div> 
         <span class="sub">BIAŁYSTOK</span> -->
     </div>
 </div>
@@ -23,6 +28,11 @@ import { CSSPlugin } from 'gsap/CSSPlugin'
   gsap.registerPlugin(CSSPlugin);
 
 export default {
+  data() {
+    return {
+      show: true
+    }
+  },
   methods: {
     animation: (tl) =>  {
       var tl = this.gsap.TimelineMax({repeat: -1, repeatDelay: 2})
@@ -52,7 +62,24 @@ export default {
       .to('.glitch', 0.02, {scaleY:1.1, ease: Power4.easeInOut})
       .to('.glitch', 0.04, {scaleY:1, ease: Power4.easeInOut})
   },
-}
+  // beforeEnter(tl) {
+  //           tl.style.opacity = 0;
+  //       },
+
+        // enter() {
+        //     gsap.to('.glitch', 0.1, {
+        //         skewX: 70,
+        //         ease: Power4.easeInOut
+               
+        //     }); // to is not working ??? 
+        // },
+},
+mounted() {
+  
+  // var tl = this.$gsap.timeline()
+  //   tl.to('.my-class', { x: 1, duration: 2, ease: 'slow' }, '+=0.5')
+  //   tl.to(this.data, { percent: 1, duration: 1, ease: 'power2.in' }, '-=1')
+},
 }
 </script>
 
